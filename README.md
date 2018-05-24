@@ -16,5 +16,5 @@ In this folder you can find code of framework. Also there is a project called "M
 ## Folder optimizationResults
 
 Šiame folderyje pateikiami parametrų optimizavimo testiniai rezultatai.<br />
-In this fodler you can find results of parameter optimization tests.
+In this folder you can find results of parameter optimization tests.
 
