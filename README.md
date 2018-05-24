@@ -11,7 +11,7 @@ In this folder you can find data of fingerprints. Also there are files in which 
 ## Folder code/FingerprintRecognition v2.2
 
 Šitame folderyje yra sistemos kodas. Taip pat projekte ,,MyCustomProject" yra programa, kuri generuoja testinius rezultatus parametrų optimizavimui.<br />
-In this folder you can find code of framework. Also there is a project called "MyCustomProject" which basically do test for parameter optimization.
+In this folder you can find code of framework. Also there is a project called "MyCustomProject" which basically do tests for parameter optimization.
 
 ## Folder optimizationResults
 
