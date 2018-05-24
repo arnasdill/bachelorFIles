@@ -1,7 +1,7 @@
 # Pirštų antspaudų atitikimo algoritmų parametrų optimizavimas (Parameter Recognition of Fingerprint Matching Algorithms)
 
 Bakalauro darbas, kuriame tiriami https://www.codeproject.com/Articles/97590/A-Framework-in-C-for-Fingerprint-Verification algoritmų parametrai.<br />
-Bachelor work about https://www.codeproject.com/Articles/97590/A-Framework-in-C-for-Fingerprint-Verification algorithms parameter.
+Bachelor work about https://www.codeproject.com/Articles/97590/A-Framework-in-C-for-Fingerprint-Verification algorithm parameters optimization.
 
 ## Folder DB
 
