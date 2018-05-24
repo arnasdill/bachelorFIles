@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FR.Parziale2004</name>
+    </assembly>
+    <members>
+        <member name="T:PatternRecognition.FingerprintRecognition.Matchers.PN">
+            <summary>
+                An implementation of the algorithm proposed by Parziale and Niel in 2003.
+            </summary>
+            <remarks>
+                <para>
+                    This is an implementation of the algorithm proposed in [1].
+                </para>
+                <para>
+                    Take into account that this algorithm is created to work with fingerprint images at 500 dpi. Proper modifications have to be made for different image resolutions.
+                </para>
+                <para>
+                    References:
+                </para>
+                <para>
+                    <list type="number">
+                        <item>
+                           G. Parziale and A. Niel, "A fingerprint matching using minutiae triangulation," in 1st International Conference on Biometric Authentication, Hong Kong, China, 2004, pp. 241-248.
+                        </item>
+                    </list>
+                </para>
+            </remarks>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Matchers.PN.AlphaAngleThr">
+            <summary>
+                The threshold of alpha angles.
+            </summary>
+            <remarks>
+                Alpha angles are used in the local minutia matching step. For more information refer to the original paper.
+            </remarks>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Matchers.PN.BetaAngleThr">
+            <summary>
+                The threshold of beta angles.
+            </summary>
+            <remarks>
+                This threshold is used to compare beta angles in the local minutia matching step. For more information refer to the original paper.
+            </remarks>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Matchers.PN.LocalDistThr">
+            <summary>
+                Distance threshold for the local minutia matching step.
+            </summary>
+            <remarks>
+                This threshold is used to compare minutia distances in the local minutia matching step. For more information refer to the original paper.
+            </remarks>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Matchers.PN.GlobalDistThr">
+            <summary>
+                Distance threshold for the global minutia matching step.
+            </summary>
+            <remarks>
+                This threshold is used to compare minutia distances in the global minutia matching step. For more information refer to the original paper.
+            </remarks>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Matchers.PN.GlobalAngleThr">
+            <summary>
+                Angle threshold for the global minutia matching step.
+            </summary>
+            <remarks>
+                This threshold is used to compare angles in the global minutia matching step. For more information refer to the original paper.
+            </remarks>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Matchers.PN.Match(PatternRecognition.FingerprintRecognition.FeatureRepresentation.PNFeatures,PatternRecognition.FingerprintRecognition.FeatureRepresentation.PNFeatures)">
+            <summary>
+                Matches the specified fingerprint features.
+            </summary>
+            <param name="query">
+                The query fingerprint features.
+            </param>
+            <param name="template">
+                The template fingerprint features.
+            </param>
+            <returns>
+                The fingerprint similarity value.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Matchers.PN.Match(System.Object,System.Object,System.Collections.Generic.List{PatternRecognition.FingerprintRecognition.Core.MinutiaPair}@)">
+            <summary>
+                Matches the specified fingerprint features and outputs the matching minutiae.
+            </summary>
+            <param name="query">
+                The query fingerprint features.
+            </param>
+            <param name="template">
+                The template fingerprint features.
+            </param>
+            <param name="matchingMtiae">
+                The matching minutiae.
+            </param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the specified features has invalid type.</exception>
+            <returns>
+                The fingerprint similarity value.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.FeatureExtractors.PNFeatureExtractor">
+            <summary>
+                A class to extract the features used by <see cref="T:PatternRecognition.FingerprintRecognition.Matchers.PN"/> to match fingerprints.
+            </summary>
+            <remarks>
+                This class can extract features from a minutia list or from an image. In order to extract features from an image, the property <see cref="P:PatternRecognition.FingerprintRecognition.FeatureExtractors.PNFeatureExtractor.MtiaExtractor"/> must be assigned.
+            </remarks>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.FeatureExtractors.PNFeatureExtractor.MtiaExtractor">
+            <summary>
+                The minutia list extractor used to compute <see cref="T:PatternRecognition.FingerprintRecognition.FeatureRepresentation.PNFeatures"/> in the method <see cref="M:PatternRecognition.FingerprintRecognition.FeatureExtractors.PNFeatureExtractor.ExtractFeatures(System.Drawing.Bitmap)"/>.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.FeatureExtractors.PNFeatureExtractor.ExtractFeatures(System.Drawing.Bitmap)">
+            <summary>
+                Extract features of type <see cref="T:PatternRecognition.FingerprintRecognition.FeatureRepresentation.PNFeatures"/> from the specified image.
+            </summary>
+            <remarks>
+                This method uses the property <see cref="P:PatternRecognition.FingerprintRecognition.FeatureExtractors.PNFeatureExtractor.MtiaExtractor"/> to extract features, so it raises an exception if the property is not assigned.
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">
+                Thrown when the minutia list extractor is not assigned
+            </exception>
+            <param name="image">The source image to extract features from.</param>
+            <returns>
+                Features of type <see cref="T:PatternRecognition.FingerprintRecognition.FeatureRepresentation.PNFeatures"/> extracted from the specified image.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.FeatureExtractors.PNFeatureExtractor.ExtractFeatures(System.Collections.Generic.List{PatternRecognition.FingerprintRecognition.Core.Minutia})">
+            <summary>
+                Extract features of type <see cref="T:PatternRecognition.FingerprintRecognition.FeatureRepresentation.PNFeatures"/> from the specified minutiae.
+            </summary>
+            <param name="minutiae">
+                The list of <see cref="T:PatternRecognition.FingerprintRecognition.Core.Minutia"/> to extract the features from.
+            </param>
+            <returns>
+                Features of type <see cref="T:PatternRecognition.FingerprintRecognition.FeatureRepresentation.PNFeatures"/> extracted from the specified minutiae.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.ResourceProviders.PNFeatureProvider">
+            <summary>
+                Allows retrieving features of type <see cref="T:PatternRecognition.FingerprintRecognition.FeatureRepresentation.PNFeatures"/> from a <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+            <remarks>
+                This features are computed from a <see cref="T:PatternRecognition.FingerprintRecognition.Core.Minutia"/> list. This way, you must set the property <see cref="P:PatternRecognition.FingerprintRecognition.ResourceProviders.PNFeatureProvider.MtiaListProvider"/> in order to compute <see cref="T:PatternRecognition.FingerprintRecognition.FeatureRepresentation.PNFeatures"/>.
+            </remarks>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.ResourceProviders.PNFeatureProvider.MtiaListProvider">
+            <summary>
+                Provides the <see cref="T:PatternRecognition.FingerprintRecognition.Core.Minutia"/> list to compute the features.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.PNFeatureProvider.GetSignature">
+            <summary>
+                Gets the signature of the resource provider.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown when the minutia list provider is not assigned or the minutia list extractor is not assigned.</exception>
+            <returns>It returns a string formed by the name of the property <see cref="P:PatternRecognition.FingerprintRecognition.ResourceProviders.PNFeatureProvider.MtiaListProvider"/> concatenated with ".pn".</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.PNFeatureProvider.IsResourcePersistent">
+            <summary>
+                Determines whether the provided <see cref="T:PatternRecognition.FingerprintRecognition.FeatureRepresentation.PNFeatures"/> is persistent.
+            </summary>
+            <returns>Always returns true.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.PNFeatureProvider.Extract(System.String,PatternRecognition.FingerprintRecognition.Core.ResourceRepository)">
+            <summary>
+                Extracts <see cref="T:PatternRecognition.FingerprintRecognition.FeatureRepresentation.PNFeatures"/> from the specified fingerprint and <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+            <param name="fingerprint">The fingerprint which resource is being extracted.</param>
+            <param name="repository">The object used to store and retrieve resources.</param>
+            <exception cref="T:System.InvalidOperationException">Thrown when the minutia list provider is not assigned or the minutia list extractor is not assigned.</exception>
+            <returns>The extracted <see cref="T:PatternRecognition.FingerprintRecognition.FeatureRepresentation.PNFeatures"/>.</returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.FeatureRepresentation.PNFeatures">
+            <summary>
+                The features used by <see cref="T:PatternRecognition.FingerprintRecognition.Matchers.PN"/> to match fingerprints.
+            </summary>
+            <remarks>
+                The constructor of this class is internal. You must use <see cref="T:PatternRecognition.FingerprintRecognition.FeatureExtractors.PNFeatureExtractor"/> in order to extract these features from fingerprints.
+            </remarks>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\SHullDelaunayTriangulation\bin\Release\SHullDelaunayTriangulation.dll.config
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\SHullDelaunayTriangulation\bin\Release\SHullDelaunayTriangulation.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\SHullDelaunayTriangulation\bin\Release\SHullDelaunayTriangulation.pdb
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\SHullDelaunayTriangulation\obj\Release\SHullDelaunayTriangulation.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\SHullDelaunayTriangulation\obj\Release\SHullDelaunayTriangulation.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\SHullDelaunayTriangulation\obj\Release\SHullDelaunayTriangulation.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\SHullDelaunayTriangulation\bin\Release\SHullDelaunayTriangulation.dll.config
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\SHullDelaunayTriangulation\bin\Release\SHullDelaunayTriangulation.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\SHullDelaunayTriangulation\bin\Release\SHullDelaunayTriangulation.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\SHullDelaunayTriangulation\obj\Release\SHullDelaunayTriangulation.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\SHullDelaunayTriangulation\obj\Release\SHullDelaunayTriangulation.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\SHullDelaunayTriangulation\obj\Release\SHullDelaunayTriangulation.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\SHullDelaunayTriangulation\obj\Release\SHullDelaunayTriangulation.csprojResolveAssemblyReference.cache

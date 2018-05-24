@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FR.Sherlock1994</name>
+    </assembly>
+    <members>
+        <member name="T:PatternRecognition.FingerprintRecognition.FeatureExtractors.Sherlock1994OrImgExtractor">
+            <summary>
+                An implementation of the <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> extractor proposed by Sherlock et al. in 1994.
+            </summary>
+            <remarks>
+                <para>
+                    This is an implementation of the <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> extractor proposed by Sherlock et al. [1] in 1994.
+                </para>
+                <para>
+                    We apply a 3x3 median filter to improve the computed <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/>.
+                </para>
+                <para>
+                    References:
+                </para>
+                <para>
+                    <list type="number">
+                        <item>
+                           B. G. Sherlock, D. M. Monro, and K. Millard, "Fingerprint enhancement by directional Fourier filtering," IEE Proceedings Vision Image and Signal Processing, vol. 141, no. 2, pp. 87-94, 1994.
+                        </item>
+                    </list>
+                </para>
+            </remarks>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.FeatureExtractors.Sherlock1994OrImgExtractor.BlockSize">
+            <summary>
+                The block size in pixels.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.FeatureExtractors.Sherlock1994OrImgExtractor.ExtractFeatures(System.Drawing.Bitmap)">
+            <summary>
+                Extract an orientation image from the specified bitmap image.
+            </summary>
+            <param name="image">The source bitmap image to extract features from.</param>
+            <returns>The features extracted from the specified bitmap image.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.FeatureExtractors.Sherlock1994OrImgExtractor.SmoothOrImg(PatternRecognition.FingerprintRecognition.Core.OrientationImage)">
+            <summary>
+                Apply 3x3 median filter to the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/>.
+            </summary>
+            <param name="img">The image to be smoothed.</param>
+            <returns>The smoothed image.</returns>
+        </member>
+    </members>
+</doc>

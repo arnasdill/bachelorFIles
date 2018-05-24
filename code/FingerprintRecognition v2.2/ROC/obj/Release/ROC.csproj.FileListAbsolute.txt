@@ -1,0 +1,13 @@
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\ROC\bin\Release\ROC.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\ROC\bin\Release\ROC.pdb
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\ROC\bin\Release\ROC.XML
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\ROC\obj\Release\ROC.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\ROC\obj\Release\ROC.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\ROC\obj\Release\ROC.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\ROC\bin\Release\ROC.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\ROC\bin\Release\ROC.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\ROC\bin\Release\ROC.XML
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\ROC\obj\Release\ROC.csprojResolveAssemblyReference.cache
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\ROC\obj\Release\ROC.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\ROC\obj\Release\ROC.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\ROC\obj\Release\ROC.pdb

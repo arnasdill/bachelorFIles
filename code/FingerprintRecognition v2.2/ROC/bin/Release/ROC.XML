@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ROC</name>
+    </assembly>
+    <members>
+        <member name="T:PatternRecognition.ROC.ROCPoint">
+            <summary>
+                Represents a point in the ROC curve.
+            </summary>
+        </member>
+        <member name="F:PatternRecognition.ROC.ROCPoint.x">
+            <summary>
+                The value of the point in the horizontal axis.
+            </summary>
+        </member>
+        <member name="F:PatternRecognition.ROC.ROCPoint.y">
+            <summary>
+                The value of the point in the vertical axis.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.ROC.ROCPoint.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+                Initialize a point with the specified values of horizontal and vertical axis.
+            </summary>
+            <param name="x">
+                The value of the new point in the horizontal axis.
+            </param>
+            <param name="y">
+                The value of the new point in the vertical axis.
+            </param>
+        </member>
+        <member name="T:PatternRecognition.ROC.IROCBuilder">
+            <summary>
+                Represents an algorithm to build ROC curves.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.ROC.IROCBuilder.BuildROC(System.Collections.Generic.ICollection{System.Double},System.Collections.Generic.ICollection{System.Double},System.Collections.Generic.IComparer{System.Double})">
+            <summary>
+                Build a ROC curve from the specified matching scores and score comparer.
+            </summary>
+            <param name="sameClassScores">
+                A collection containing the matching scores of objects in the same class.
+            </param>
+            <param name="diffClassScores">
+                A collection containing the matching scores of objects in different class.
+            </param>
+            <param name="scoreComparer">
+                A comparer for matching scores.
+            </param>
+            <returns>
+                The points that compose the ROC curve.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.ROC.FNMRvsFMR">
+            <summary>
+                Builds ROC curve of type False Not Matching Rate versus False Matching Rate.
+            </summary>
+            <remarks>
+                <para>
+                    This implementation is based on the algorithm proposed in [1].
+                </para>
+                <para>
+                    References:
+                </para>
+                <para>
+                    <list type="number">
+                        <item>
+                           T. Fawcett, "An introduction to ROC analysis," Pattern Recognition Letters, vol. 27, pp. 861-874, 2006.
+                        </item>
+                    </list>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:PatternRecognition.ROC.FNMRvsFMR.BuildROC(System.Collections.Generic.ICollection{System.Double},System.Collections.Generic.ICollection{System.Double},System.Collections.Generic.IComparer{System.Double})">
+            <summary>
+                Build a ROC curve from the specified matching scores and score comparer.
+            </summary>
+            <param name="positiveMatching">
+                A collection containing the matching scores of objects in the same class.
+            </param>
+            <param name="negativeMatching">
+                A collection containing the matching scores of objects in different class.
+            </param>
+            <param name="scoreComparer">
+                A comparer for matching scores.
+            </param>
+            <returns>
+                The points that compose the ROC curve.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.ROC.TPRvsFPR">
+            <summary>
+                Builds ROC curve of type True Positive Rate versus False Positive Rate ROC Builder.
+            </summary>
+            <remarks>
+                <para>
+                    This implementation is based on the algorithm proposed in [1].
+                </para>
+                <para>
+                    References:
+                </para>
+                <para>
+                    <list type="number">
+                        <item>
+                           T. Fawcett, "An introduction to ROC analysis," Pattern Recognition Letters, vol. 27, pp. 861-874, 2006.
+                        </item>
+                    </list>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:PatternRecognition.ROC.TPRvsFPR.BuildROC(System.Collections.Generic.ICollection{System.Double},System.Collections.Generic.ICollection{System.Double},System.Collections.Generic.IComparer{System.Double})">
+            <summary>
+                Build a ROC curve from the specified matching scores and score comparer.
+            </summary>
+            <param name="positiveMatching">
+                A collection containing the matching scores of objects in the same class.
+            </param>
+            <param name="negativeMatching">
+                A collection containing the matching scores of objects in different class.
+            </param>
+            <param name="scoreComparer">
+                A comparer for matching scores.
+            </param>
+            <returns>
+                The points that compose the ROC curve.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.ROC.ROCSerializer">
+            <summary>
+                A utility class used to serialize and deserialize ROC curves.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.ROC.ROCSerializer.Serialize(System.Collections.Generic.List{PatternRecognition.ROC.ROCPoint},System.String,System.String,System.String,System.String)">
+            <summary>
+                Serialize the ROC curve to the specified file name.
+            </summary>
+            <param name="roc">
+                The points composing the ROC curve.
+            </param>
+            <param name="xLabel">
+                The label of horizontal axis in the ROC curve.
+            </param>
+            <param name="yLabel">
+                The label of vertical axis in the ROC curve.
+            </param>
+            <param name="matcherName">
+                The name of the fingerprint matcher.
+            </param>
+            <param name="fileName">
+                The file name where the curve will be serialized.
+            </param>
+        </member>
+        <member name="M:PatternRecognition.ROC.ROCSerializer.Serialize(System.Collections.Generic.List{PatternRecognition.ROC.ROCPoint},System.String,System.String,System.String,System.IO.StreamWriter)">
+            <summary>
+                Serialize the ROC curve to the specified <see cref="T:System.IO.StreamWriter"/>.
+            </summary>
+            <param name="roc">
+                The points composing the ROC curve.
+            </param>
+            <param name="xLabel">
+                The label of horizontal axis in the ROC curve.
+            </param>
+            <param name="yLabel">
+                The label of vertical axis in the ROC curve.
+            </param>
+            <param name="matcherName">
+                The name of the fingerprint matcher.
+            </param>
+            <param name="fs">
+                The <see cref="T:System.IO.StreamWriter"/> where the curve will be serialized.
+            </param>
+        </member>
+        <member name="M:PatternRecognition.ROC.ROCSerializer.Deserialize(System.String,System.String@,System.String@,System.String@)">
+            <summary>
+                Deserialize the ROC curve from the specified file name.
+            </summary>
+            <param name="fileName">
+                The file name where the ROC curve is serialized.
+            </param>
+            <param name="xLabel">
+                The label of horizontal axis in the ROC curve.
+            </param>
+            <param name="yLabel">
+                The label of vertical axis in the ROC curve.
+            </param>
+            <param name="matcherName">
+                The name of the fingerprint matcher.
+            </param>
+            <returns>
+                The points composing the ROC curve.
+            </returns>
+        </member>
+    </members>
+</doc>

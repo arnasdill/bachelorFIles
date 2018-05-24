@@ -1,0 +1,15 @@
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.Qi2005.XML
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.Qi2005.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.Qi2005.pdb
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Qi2005\obj\Release\FR.Qi2005.csprojResolveAssemblyReference.cache
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Qi2005\obj\Release\FR.Qi2005.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Qi2005\obj\Release\FR.Qi2005.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Qi2005\obj\Release\FR.Qi2005.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.Qi2005.XML
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.Qi2005.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.Qi2005.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Qi2005\obj\Release\FR.Qi2005.csprojResolveAssemblyReference.cache
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Qi2005\obj\Release\FR.Qi2005.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Qi2005\obj\Release\FR.Qi2005.csproj.CopyComplete
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Qi2005\obj\Release\FR.Qi2005.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Qi2005\obj\Release\FR.Qi2005.pdb

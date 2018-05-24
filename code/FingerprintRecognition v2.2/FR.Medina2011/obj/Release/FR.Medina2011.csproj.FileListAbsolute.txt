@@ -1,0 +1,13 @@
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.Medina2011.XML
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.Medina2011.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.Medina2011.pdb
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Medina2011\obj\Release\FR.Medina2011.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Medina2011\obj\Release\FR.Medina2011.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Medina2011\obj\Release\FR.Medina2011.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.Medina2011.XML
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.Medina2011.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.Medina2011.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Medina2011\obj\Release\FR.Medina2011.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Medina2011\obj\Release\FR.Medina2011.csproj.CopyComplete
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Medina2011\obj\Release\FR.Medina2011.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Medina2011\obj\Release\FR.Medina2011.pdb

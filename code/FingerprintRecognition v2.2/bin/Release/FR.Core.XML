@@ -1,0 +1,1447 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FR.Core</name>
+    </assembly>
+    <members>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.Angle">
+            <summary>
+                Provides basic functionality related to angles.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Angle.ComputeAngle(System.Double,System.Double)">
+            <summary>
+                Computes the angle formed by the specified horizontal and vertical variations.
+            </summary>
+            <param name="dX">The horizontal variation.</param>
+            <param name="dY">The vertical variation.</param>
+            <returns>
+                The angle in radians formed by the specified horizontal and vertical variations.
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+                Thrown when <paramref name="dX"/>==0 and <paramref name="dY"/>==0 because no angle can be computed.
+            </exception>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Angle.Difference2Pi(System.Double,System.Double)">
+            <summary>
+                Computes the angle required to rotate one vector with angle <paramref name="alpha"/> in counterclockwise sense to superpose it to another vector with the same origin and angle <paramref name="beta"/>.
+            </summary>
+            <remarks>
+                This function returns the angle in radians and it is defined in the interval [0,π). This is not a symmetric function, so it returns different values when swapping parameters.  
+            </remarks>
+            <param name="alpha">
+                The angle, in radians, of the vector that is rotated in counterclockwise sense.
+            </param>
+            <param name="beta">
+                The angle, in radians, of the vector that is not rotated.
+            </param>
+            <returns>
+                The computed angle in radians.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Angle.DifferencePi(System.Double,System.Double)">
+            <summary>
+                Computes the minimum rotation angle required to superpose two vectors with the same origin and the specified angles.
+            </summary>
+            <remarks>
+                This function returns the angle in radians and it is defined in the interval [0,π). This is a symmetric function, so it returns the same value when swapping parameters.
+            </remarks>
+            <param name="alpha">
+                The angle of one vector.
+            </param>
+            <param name="beta">
+                The angle of the other vector.
+            </param>
+            <returns>
+                The computed angle in radians.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Angle.Difference180(System.Int32,System.Int32)">
+            <summary>
+                Computes the minimum rotation angle required to superpose two vectors with the same origin and the specified angles.
+            </summary>
+            <remarks>
+                This function returns the angle in degrees and it is defined in the interval [0,180º). This is a symmetric function, so it returns the same value when swapping parameters.
+            </remarks>
+            <param name="alpha">
+                The angle in degrees of one vector.
+            </param>
+            <param name="beta">
+                The angle in degrees of the other vector.
+            </param>
+            <returns>
+                The computed angle in degrees.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Angle.ToRadians(System.Int32)">
+            <summary>
+                Converts the specified degrees into radians.
+            </summary>
+            <param name="degrees">The degrees to convert into radians.</param>
+            <returns>
+                The radians computed from the specified degrees.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Angle.ToDegrees(System.Double)">
+            <summary>
+                Converts the specified radians into degrees.
+            </summary>
+            <param name="radians">The radians to convert into degrees.</param>
+            <returns>
+                The degrees computed from the specified radians.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.BinarySerializer">
+            <summary>
+                Provides basic functionality to serialize and deserialize objects in binary format.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.BinarySerializer.Serialize(System.Object,System.String)">
+            <summary>
+                Serialize in binary format the specified object to the provided location.
+            </summary>
+            <param name="obj">
+                The object to serialize.
+            </param>
+            <param name="FileName">
+                The location where the specified object will be serialized.
+            </param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.BinarySerializer.Serialize(System.Object)">
+            <summary>
+                Serialize the specified object to byte array.
+            </summary>
+            <param name="obj">
+                The object to serialize.
+            </param>
+            <returns>
+                The serialized object in byte array format.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.BinarySerializer.Serialize(System.Object,System.IO.Stream)">
+            <summary>
+                Serialize in binary format the specified object to the specified <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="obj">
+                The object to serialize.
+            </param>
+            <param name="stream">
+                The <see cref="T:System.IO.Stream"/> where the specified object will be serialized.
+            </param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.BinarySerializer.Deserialize(System.IO.Stream)">
+            <summary>
+                Deserialize the object contained in the specified <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="stream">
+                The <see cref="T:System.IO.Stream"/> containing the object to be deserialized.
+            </param>
+            <returns>
+                The object deserialized from the specified <see cref="T:System.IO.Stream"/>.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.BinarySerializer.Deserialize(System.String)">
+            <summary>
+                Deserialize the object saved in the specified location.
+            </summary>
+            <param name="fileName">
+                The location containing the object to be deserialized.
+            </param>
+            <returns>
+                The object deserialized from the specified location.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.BinarySerializer.Deserialize(System.Byte[])">
+            <summary>
+                Deserialize the object contained in the specified byte array.
+            </summary>
+            <param name="data">
+                The byte array containing the object to be deserialized.
+            </param>
+            <returns>
+                The object deserialized from the specified byte array.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.IExperiment">
+            <summary>
+                The common interface for any experiment.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.IExperiment.Execute">
+            <summary>
+                Executes the experiment.
+            </summary>
+        </member>
+        <member name="E:PatternRecognition.FingerprintRecognition.Core.IExperiment.StatusEvent">
+            <summary>
+                Event that provides information about the experiment status.
+            </summary>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.IMatchingExperiment">
+            <summary>
+                Used to evaluate matching algorithms based on the protocol of the Fingerprint Verification Competitions.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.IMatchingExperiment.ResourcePath">
+            <summary>
+                The path where the resources are stored.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.IMatchingExperiment.Matcher">
+            <summary>
+                The matcher to be evaluated.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.IMatchingExperiment.ResourceProvider">
+            <summary>
+                Used to provide the features used by the specified matcher.
+            </summary>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImageSerializer">
+            <summary>
+                Allows saving and retrieving instances of <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/>.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.SkeletonImageSerializer.Serialize(System.String,PatternRecognition.FingerprintRecognition.Core.SkeletonImage)">
+            <summary>
+                Save the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> to the specified file name.
+            </summary>
+            <remarks>
+                Before saving, the <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> is encoded using the method <see cref="M:PatternRecognition.FingerprintRecognition.Core.SkeletonImageSerializer.ToByteArray(PatternRecognition.FingerprintRecognition.Core.SkeletonImage)"/>.
+            </remarks>
+            <param name="fileName">The file name where the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> will be saved.</param>
+            <param name="skImg">The <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> to be saved.</param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.SkeletonImageSerializer.Deserialize(System.String)">
+            <summary>
+                Load the <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> saved in the specified file name.
+            </summary>
+            <remarks>
+                The <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> are decoded using method <see cref="M:PatternRecognition.FingerprintRecognition.Core.SkeletonImageSerializer.FromByteArray(System.Byte[])"/>.
+            </remarks>
+            <param name="fileName">The file name where the<see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> is saved.</param>
+            <returns>The <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> loaded from file.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.SkeletonImageSerializer.FromByteArray(System.Byte[])">
+            <summary>
+                Decodes a <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> object from a byte array.
+            </summary>
+            <remarks>
+                This codification uses two bytes to store <see cref="P:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.Width"/>; two more bytes to store <see cref="P:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.Height"/>; and one bit for each pixel of the <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/>. Therefore, this method is ineffective for values of <see cref="P:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.Width"/> and <see cref="P:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.Height"/> greater than 65535.
+            </remarks>
+            <param name="bytes">The byte array containing the encoded <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> object.</param>
+            <returns>The <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> object decoded from the specified byte array.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.SkeletonImageSerializer.ToByteArray(PatternRecognition.FingerprintRecognition.Core.SkeletonImage)">
+            <summary>
+                Encodes the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> into a byte array.
+            </summary>
+            <remarks>
+                This codification uses two bytes to store <see cref="P:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.Width"/>; two more bytes to store <see cref="P:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.Height"/>; and one bit for each pixel of the <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/>. Therefore, this method is ineffective for values of <see cref="P:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.Width"/> and <see cref="P:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.Height"/> greater than 65535.
+            </remarks>
+            <param name="skImg">The <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> object which is going to be encoded to a byte array.</param>
+            <returns>The byte array containing the encoded <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> object.</returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.FingerprintImageProvider">
+            <summary>
+                Allows retrieving fingerprint image resource.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.FingerprintImageProvider.PatternRecognition#FingerprintRecognition#Core#IResourceProvider#GetResource(System.String,PatternRecognition.FingerprintRecognition.Core.ResourceRepository)">
+            <summary>
+                Gets the fingerprint image from the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+            <param name="fingerprint">The fingerprint which image is being retrieved.</param>
+            <param name="repository">The object used to store and retrieve resources.</param>
+            <returns>The retrieved fingerprint image.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.FingerprintImageProvider.GetSignature">
+            <summary>
+                Gets the signature of the fingerprint image provider.
+            </summary>
+            <remarks>This method is irrelevant, so it returns an empty string.</remarks>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.FingerprintImageProvider.IsResourcePersistent">
+            <summary>
+                Determines whether the fingerprint image provider is persistent.
+            </summary>
+            <returns>Always returns true.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.FingerprintImageProvider.GetResource(System.String,PatternRecognition.FingerprintRecognition.Core.ResourceRepository)">
+            <summary>
+                Gets the fingerprint image from the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+            <param name="fingerprint">The fingerprint which image is being retrieved.</param>
+            <param name="repository">The object used to store and retrieve resources.</param>
+            <returns>The retrieved fingerprint image.</returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.IResourceProvider">
+            <summary>
+                Represents a non-generic fingerprint resource provider.
+            </summary>
+            <remarks>
+                A fingerprint resource is any information related to a fingerprint. A resource is identified by a string label, and this label is formed by the fingerprint name and the signature of the resource provider. Consider to make all the resources persistent in order to save computation time.
+            </remarks>
+            <seealso cref="M:PatternRecognition.FingerprintRecognition.Core.IResourceProvider.IsResourcePersistent"/>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.IResourceProvider.GetResource(System.String,PatternRecognition.FingerprintRecognition.Core.ResourceRepository)">
+            <summary>
+                Gets the resource for the specified fingerprint through the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+            <param name="fingerprint">The fingerprint which resource is being retrieved.</param>
+            <param name="repository">The object used to store and retrieve resources.</param>
+            <returns>The retrieved resource.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.IResourceProvider.GetSignature">
+            <summary>
+                Gets the signature of the resource provider.
+            </summary>
+            <returns>The signature of the resource provider.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.IResourceProvider.IsResourcePersistent">
+            <summary>
+                Determines whether the resource provider is persistent.
+            </summary>
+            <returns>True if the resource provider is persistent; otherwise, false.</returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.IResourceProvider`1">
+            <summary>
+                Represents a fingerprint resource provider.
+            </summary>
+            <remarks>
+                A fingerprint resource is any information related to a fingerprint. A resource is identified by a string label, and this label is formed by the fingerprint name and the signature of the resource provider. Consider to make all the resources persistent in order to save computation time.
+            </remarks>
+            <typeparam name="ResourceType">
+                The type of the resource that can be retrieved through this interface.
+            </typeparam>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.IResourceProvider`1.GetResource(System.String,PatternRecognition.FingerprintRecognition.Core.ResourceRepository)">
+            <summary>
+                Gets the resource for the specified fingerprint through the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+            <param name="fingerprint">The fingerprint which resource is being retrieved.</param>
+            <param name="repository">The object used to store and retrieve resources.</param>
+            <returns>The retrieved resource.</returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.ResourceProvider`1">
+            <summary>
+                Provides a base class for implementations of the <see cref="T:PatternRecognition.FingerprintRecognition.Core.IResourceProvider`1"/> generic interface.
+            </summary>
+            <typeparam name="ResourceType">
+                The type of the resource that can be retrieved through this class.
+            </typeparam>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.ResourceProvider`1.GetSignature">
+            <summary>
+                Gets the signature of the resource provider.
+            </summary>
+            <returns>The signature of the resource provider.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.ResourceProvider`1.IsResourcePersistent">
+            <summary>
+                Determines whether the resource provider is persistent.
+            </summary>
+            <returns>True if the resource provider is persistent; otherwise, false.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.ResourceProvider`1.PatternRecognition#FingerprintRecognition#Core#IResourceProvider#GetResource(System.String,PatternRecognition.FingerprintRecognition.Core.ResourceRepository)">
+            <summary>
+                Gets the resource for the specified fingerprint through the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+            <param name="fingerprint">The fingerprint which resource is being retrieved.</param>
+            <param name="repository">The object used to store and retrieve resources.</param>
+            <returns>The retrieved resource.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.ResourceProvider`1.GetResource(System.String,PatternRecognition.FingerprintRecognition.Core.ResourceRepository)">
+            <summary>
+                Gets the resource for the specified fingerprint through the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+            <param name="fingerprint">The fingerprint which resource is being retrieved.</param>
+            <param name="repository">The object used to store and retrieve resources.</param>
+            <returns>The retrieved resource.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.ResourceProvider`1.Extract(System.String,PatternRecognition.FingerprintRecognition.Core.ResourceRepository)">
+            <summary>
+                When implemented in a derived class, extracts the requested resource from the specified fingerprint.
+            </summary>
+            <param name="fingerprint">The fingerprint which resource is being extracted.</param>
+            <param name="repository">The object used to store and retrieve resources.</param>
+            <returns>The extracted resource.</returns>
+        </member>
+        <member name="F:PatternRecognition.FingerprintRecognition.Core.ResourceProvider`1.imageProvider">
+            <summary>
+                The provider used to retrieve the fingerprint image.
+            </summary>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.IMatcher">
+            <summary>
+                Represents a non-generic fingerprint matching algorithm.
+            </summary>
+            <remarks>
+                A fingerprint matching algorithm compares fingerprint features and returns a matching score. The higher returned value, the greater is the fingerprints similarity.
+            </remarks>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.IMatcher.Match(System.Object,System.Object)">
+            <summary>
+                Matches the specified fingerprint features.
+            </summary>
+            <param name="query">
+                The query fingerprint features.
+            </param>
+            <param name="template">
+                The template fingerprint features.
+            </param>
+            <returns>
+                The fingerprint similarity value.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.IMinutiaMatcher">
+            <summary>
+                Represents a minutia matching algorithm. 
+            </summary>
+            <remarks>
+                A minutia matching algorithm compares fingerprints based on minutia features. 
+            </remarks>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.IMinutiaMatcher.Match(System.Object,System.Object,System.Collections.Generic.List{PatternRecognition.FingerprintRecognition.Core.MinutiaPair}@)">
+            <summary>
+                Matches the specified fingerprint features and returns the matching minutiae.
+            </summary>
+            <param name="query">
+                The query fingerprint features.
+            </param>
+            <param name="template">
+                The template fingerprint features.
+            </param>
+            <param name="matchingMtiae">
+                The matching minutiae..
+            </param>
+            <returns>
+                The fingerprint similarity value.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.IMatcher`1">
+            <summary>
+                Represents a fingerprint matching algorithm.
+            </summary>
+            <remarks>
+                <para>
+                    A fingerprint matching algorithm compares fingerprint features and returns a matching score. The higher returned value, the greater is the fingerprints similarity.
+                </para>
+            </remarks>
+            <typeparam name="FeatureType">
+                The type of the features that can be matched.
+            </typeparam>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.IMatcher`1.Match(`0,`0)">
+            <summary>
+                Matches the specified fingerprint features.
+            </summary>
+            <param name="query">
+                The query fingerprint features.
+            </param>
+            <param name="template">
+                The template fingerprint features.
+            </param>
+            <returns>
+                The fingerprint similarity value.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.Matcher`1">
+            <summary>
+                Provides a base class for implementations of the <see cref="T:PatternRecognition.FingerprintRecognition.Core.IMatcher`1"/> generic interface.
+            </summary>
+            <typeparam name="FeatureType">
+                The type of the features that can be matched.
+            </typeparam>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Matcher`1.Match(`0,`0)">
+            <summary>
+                When implemented in a derived class, matches the specified fingerprint features.
+            </summary>
+            <param name="query">
+                The query fingerprint features.
+            </param>
+            <param name="template">
+                The template fingerprint features.
+            </param>
+            <returns>
+                The fingerprint similarity value.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Matcher`1.Match(System.Object,System.Object)">
+            <summary>
+                Matches the specified fingerprint features.
+            </summary>
+            <param name="query">
+                The query fingerprint features.
+            </param>
+            <param name="template">
+                The template fingerprint features.
+            </param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the specified features has invalid type.</exception>
+            <returns>
+                The fingerprint matching value.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.ISOMinutiaeLoader">
+            <summary>
+                Allows loading minutiae from files with ISO/IEC 19794-2:2005 format.
+            </summary>
+            <remarks>
+                <para>
+                    This class assumes that there is only one fingerprint for each template file.
+                </para>
+            </remarks>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.ISOMinutiaeLoader.Load(System.String)">
+            <summary>
+                Load minutiae from the file in the specified location.
+            </summary>
+            <param name="fileName">
+                The location of the file with the minutiae.
+            </param>
+            <returns>
+                The minutia list loaded from the specified file.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.IntegerTriangle">
+            <summary>
+                Represents a triangle of the Delaunay triangulation.
+            </summary>
+        </member>
+        <member name="F:PatternRecognition.FingerprintRecognition.Core.IntegerTriangle.A">
+            <summary>
+                The index of the first minutia.
+            </summary>
+        </member>
+        <member name="F:PatternRecognition.FingerprintRecognition.Core.IntegerTriangle.B">
+            <summary>
+                The index of the second minutia.
+            </summary>
+        </member>
+        <member name="F:PatternRecognition.FingerprintRecognition.Core.IntegerTriangle.C">
+            <summary>
+                The index of the third minutia.
+            </summary>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.Delaunay2D">
+            <summary>
+                Performs Delaunay triangulation over a collection of <see cref="T:PatternRecognition.FingerprintRecognition.Core.Minutia"/>.
+            </summary>
+            <remarks>
+                This class is based on the implementation of Salvatore Previti (http://www.salvatorepreviti.it - info@salvatorepreviti.it).
+            </remarks>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Delaunay2D.Triangulate(System.Collections.Generic.ICollection{PatternRecognition.FingerprintRecognition.Core.Minutia})">
+            <summary>
+                Performs Delaunay triangulation over the specified collection of <see cref="T:PatternRecognition.FingerprintRecognition.Core.Minutia"/>.
+            </summary>
+            <param name="minutiae">The collection of <see cref="T:PatternRecognition.FingerprintRecognition.Core.Minutia"/> to triangulate.</param>
+            <returns>The Delaunay triangles.</returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.Delaunay2D.DelaunayTriangulator">
+            <summary>
+            A specialized very fast table of edges for triangulation.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Delaunay2D.DelaunayTriangulator.GetMinMaxPointCoordinates(System.Drawing.PointF[],System.Int32,System.Drawing.PointF@,System.Drawing.PointF@)">
+            <summary>
+            Get minimum and maximum X and Y values from specified array.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Delaunay2D.DelaunayTriangulator.GetSortedPointIndices(System.Drawing.PointF[],System.Int32,System.Single)">
+            <summary>
+            Create an array of indices from a PointF array sorting them by Y (firstly), X (secondly) and insertion order (thirdly)
+            </summary>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.MinutiaListSerializer">
+            <summary>
+                Allows saving and retrieving minutiae.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.MinutiaListSerializer.ToByteArray(System.Collections.Generic.List{PatternRecognition.FingerprintRecognition.Core.Minutia})">
+            <summary>
+                Encodes the specified minutia list into a byte array.
+            </summary>
+            <remarks>
+                This codification uses four bytes per minutia: <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.X"/> in the left most 11 bits; <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.Y"/> in the next 11 bits; <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.Angle"/> in the next eight bits; and <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.MinutiaType"/> in the last two bits. Therefore, this method is ineffective for values of <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.X"/> or <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.Y"/> greater than 2047.
+            </remarks>
+            <param name="minutiaList">The minutia list which is going to be encoded to a byte array.</param>
+            <returns>The byte array containing the encoded minutia list.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.MinutiaListSerializer.FromByteArray(System.Byte[])">
+            <summary>
+                Decodes a minutia list from a byte array.
+            </summary>
+            <remarks>
+                This codification uses four bytes per minutia: <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.X"/> in the left most 11 bits; <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.Y"/> in the next 11 bits; <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.Angle"/> in the next eight bits; and <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.MinutiaType"/> in the last two bits. Therefore, this method is ineffective for values of <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.X"/> or <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.Y"/> greater than 2047.
+            </remarks>
+            <param name="bytes">The byte array containing the encoded minutia list.</param>
+            <returns>The minutia list decoded from the specified byte array.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.MinutiaListSerializer.Serialize(System.String,System.Collections.Generic.List{PatternRecognition.FingerprintRecognition.Core.Minutia})">
+            <summary>
+                Save the specified minutia list to the specified file name.
+            </summary>
+            <remarks>
+                Before saving, the minutia list is encoded using the method <see cref="M:PatternRecognition.FingerprintRecognition.Core.MinutiaListSerializer.ToByteArray(System.Collections.Generic.List{PatternRecognition.FingerprintRecognition.Core.Minutia})"/>.
+            </remarks>
+            <param name="fileName">The file name where the minutia list will be saved.</param>
+            <param name="minutiae">The minutia List to be saved.</param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.MinutiaListSerializer.Deserialize(System.String)">
+            <summary>
+                Load the minutia list saved in the specified file name.
+            </summary>
+            <remarks>
+                The minutia list are decoded using method <see cref="M:PatternRecognition.FingerprintRecognition.Core.MinutiaListSerializer.FromByteArray(System.Byte[])"/>.
+            </remarks>
+            <param name="fileName">The file name where the minutia list is saved.</param>
+            <returns>The minutia list loaded from file.</returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage">
+            <summary>
+                Represents an orientation image.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.OrientationImage.#ctor(System.Byte,System.Byte,System.Byte[0:,0:],System.Byte)">
+            <summary>
+                Initialize an <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> with the specified width, height, orientation values, and window size.
+            </summary>
+            <param name="width">The width of the orientation image.</param>
+            <param name="height">The height of the orientation image.</param>
+            <param name="orientations">The orientation values.</param>
+            <param name="wSize">The window size of the orientation image.</param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.OrientationImage.#ctor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+                Initialize an <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> with the specified width, height, orientation values, and window size.
+            </summary>
+            <param name="width">The width of the orientation image.</param>
+            <param name="height">The height of the orientation image.</param>
+            <param name="wSize">The window size of the orientation image.</param>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.Item(System.Int32,System.Int32)">
+            <summary>
+                Gets or sets the orientation in degrees of the block in the specified coordinates.
+            </summary>
+            <param name="row">The row of the specified block.</param>
+            <param name="col">The column of the specified block.</param>
+            <returns>
+                The angle in degrees of the specified block.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.OrientationImage.AngleInRadians(System.Int32,System.Int32)">
+            <summary>
+                Gets the orientation in radians of the block in the specified coordinates.
+            </summary>
+            <param name="row">The row of the specified block.</param>
+            <param name="col">The column of the specified block.</param>
+            <returns>
+                The angle in radians of the specified block.
+            </returns>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.Width">
+            <summary>
+                Gets or sets the width of the orientation image.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.Height">
+            <summary>
+                Gets or sets the height of the orientation image.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.WindowSize">
+            <summary>
+                Gets or sets the window size of the orientation image.
+            </summary>
+        </member>
+        <member name="F:PatternRecognition.FingerprintRecognition.Core.OrientationImage.Null">
+            <summary>
+                Constains the numerical value of undefined blocks.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.OrientationImage.IsNullBlock(System.Int32,System.Int32)">
+            <summary>
+                Determines whether the block with the specified coordinates is undefined.
+            </summary>
+            <param name="row">The row coordinate of the block.</param>
+            <param name="col">The column coordinate of the block.</param>
+            <returns>
+                True if the block with the specified coordinates is undefined; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.OrientationImage.GetBlockCoordFromPixel(System.Double,System.Double,System.Int32@,System.Int32@)">
+            <summary>
+                Gets, in out parameters, the block coordinates where the pixel, with specified coordinates, resides.
+            </summary>
+            <param name="x">The x component of the pixel.</param>
+            <param name="y">The y component of the pixel.</param>
+            <param name="row">The row of the returned block.</param>
+            <param name="col">The column of the returned block.</param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.OrientationImage.GetPixelCoordFromBlock(System.Int32,System.Int32,System.Double@,System.Double@)">
+            <summary>
+                Gets, in out parameters, the pixel coordinates of the center of the block with the specified coordinates.
+            </summary>
+            <param name="row">The row of the block.</param>
+            <param name="col">The column of the block.</param>
+            <param name="x">The x component of the returned pixel.</param>
+            <param name="y">The y component of the returned pixel.</param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.OrientationImage.GetPixelCoordFromBlock(System.Int32,System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+                Gets, in out parameters, the pixel coordinates of the center of the block with the specified coordinates.
+            </summary>
+            <param name="row">The row of the block.</param>
+            <param name="col">The column of the block.</param>
+            <param name="x">The x component of the returned pixel.</param>
+            <param name="y">The y component of the returned pixel.</param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.OrientationImage.GetBlockCoordFromIdx(System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+                Gets, in out parameters, the coordinates of the block with the specified index.
+            </summary>
+            <param name="blockIdx">The block index.</param>
+            <param name="row">The row of the returned block.</param>
+            <param name="col">The column of the returned block.</param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.OrientationImage.GetBlockIdxFromCoord(System.Int32,System.Int32)">
+            <summary>
+               Gets the index of the block with the specified coordinates.
+            </summary>
+            <param name="row">The row of the block.</param>
+            <param name="col">The column of the block.</param>
+            <returns>
+                The index of the block with the specified coordinates.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.ImageLoader">
+            <summary>
+                Provides a method to load the image in the specified location and returns a copy with 24 bits per pixel.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.ImageLoader.LoadImage(System.String)">
+            <summary>
+                Load the image from the specified location and returns a copy with 24 bits per pixel.
+            </summary>
+            <param name="fileName">
+                The location of the image to load.
+            </param>
+            <returns>
+                A copy of the loaded image with 24 bits per pixel.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.IFeatureDisplay">
+            <summary>
+                Represents a non-generic object that can paint fingerprint features. 
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.IFeatureDisplay.Show(System.Object,System.Drawing.Graphics)">
+            <summary>
+                Paints the specified features using the specified <see cref="T:System.Drawing.Graphics"/>.
+            </summary>
+            <param name="features">The features to be painted.</param>
+            <param name="g">The <see cref="T:System.Drawing.Graphics"/> object used to paint the features.</param>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.IFeatureDisplay`1">
+            <summary>
+                Represents an object that can paint fingerprint features.
+            </summary>
+            <typeparam name="FeatureType">
+                The type of the features that the object can paint.
+            </typeparam>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.IFeatureDisplay`1.Show(`0,System.Drawing.Graphics)">
+            <summary>
+                Paints the specified features using the specified <see cref="T:System.Drawing.Graphics"/>.
+            </summary>
+            <param name="features">The features to be painted.</param>
+            <param name="g">The <see cref="T:System.Drawing.Graphics"/> object used to paint the features.</param>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.FeatureDisplay`1">
+            <summary>
+                Provides a base class for implementations of the <see cref="T:PatternRecognition.FingerprintRecognition.Core.IFeatureDisplay`1"/> generic interface.
+            </summary>
+            <typeparam name="FeatureType">
+                The type of the feature that the object can paint.
+            </typeparam>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.FeatureDisplay`1.Show(`0,System.Drawing.Graphics)">
+            <summary>
+                When implemented in a derived class, paints the specified features using the specified <see cref="T:System.Drawing.Graphics"/>.
+            </summary>
+            <param name="features">The features to be painted.</param>
+            <param name="g">The <see cref="T:System.Drawing.Graphics"/> object used to paint the features.</param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.FeatureDisplay`1.Show(System.Object,System.Drawing.Graphics)">
+            <summary>
+                Paints the specified features using the specified <see cref="T:System.Drawing.Graphics"/>.
+            </summary>
+            <param name="features">The features to be painted.</param>
+            <param name="g">The <see cref="T:System.Drawing.Graphics"/> object used to paint the features.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+                Thrown when the type of the specified features is not correct.
+            </exception>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.IFeatureExtractor">
+            <summary>
+                Represents a non-generic algorithm for features extraction. 
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.IFeatureExtractor.ExtractFeatures(System.Drawing.Bitmap)">
+            <summary>
+                Extract features from the specified image.
+            </summary>
+            <param name="image">The source image to extract features from.</param>
+            <returns>The features extracted from the specified image.</returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.IFeatureExtractor`1">
+            <summary>
+                Represents an algorithm for features extraction. 
+            </summary>
+            <typeparam name="FeatureType">
+                The type of the features to be extracted.
+            </typeparam>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.IFeatureExtractor`1.ExtractFeatures(System.Drawing.Bitmap)">
+            <summary>
+                Extract features from the specified image.
+            </summary>
+            <param name="image">The source image to extract features from.</param>
+            <returns>The features extracted from the specified image.</returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.FeatureExtractor`1">
+            <summary>
+                Provides a base class for implementations of the <see cref="T:PatternRecognition.FingerprintRecognition.Core.IFeatureExtractor`1"/> generic interface.
+            </summary>
+            <typeparam name="FeatureType">
+                The type of the features to be extracted.
+            </typeparam>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.FeatureExtractor`1.ExtractFeatures(System.Drawing.Bitmap)">
+            <summary>
+                When implemented in a derived class, extract features from the specified image.
+            </summary>
+            <param name="image">The source image to extract features from.</param>
+            <returns>The features extracted from the specified image.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.FeatureExtractor`1.PatternRecognition#FingerprintRecognition#Core#IFeatureExtractor#ExtractFeatures(System.Drawing.Bitmap)">
+            <summary>
+                Extract features from the specified image.
+            </summary>
+            <param name="image">The source image to extract features from.</param>
+            <returns>The features extracted from the specified image.</returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.MinutiaType">
+            <summary>
+                Represents the type of the minutia.
+            </summary>
+        </member>
+        <member name="F:PatternRecognition.FingerprintRecognition.Core.MinutiaType.Unknown">
+            <summary>
+                Represents a minutia which type could not be identified.
+            </summary>
+        </member>
+        <member name="F:PatternRecognition.FingerprintRecognition.Core.MinutiaType.End">
+            <summary>
+                Represents a ridge ending.
+            </summary>
+        </member>
+        <member name="F:PatternRecognition.FingerprintRecognition.Core.MinutiaType.Bifurcation">
+            <summary>
+                Represents a ridge bifurcation.
+            </summary>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.Minutia">
+            <summary>
+                Represents a minutia.
+            </summary>
+            <remarks>
+                <para>
+                    This minutia representation assumes that the angle is represented in radians.
+                </para>
+                <para>
+                    The hash code of these objects uses four bytes per minutia: <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.X"/> in the left most 11 bits; <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.Y"/> in the next 11 bits; <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.Angle"/> in the next eight bits; and <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.MinutiaType"/> in the last two bits. Therefore, this method is ineffective for values of <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.X"/> or <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.Y"/> greater than 2047.
+                </para>
+            </remarks>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Minutia.#ctor(System.Int16,System.Int16,System.Double)">
+            <summary>
+                Initializes a new instance of the <see cref="T:PatternRecognition.FingerprintRecognition.Core.Minutia"/> class using the specified location and angle.
+            </summary>
+            <remarks>
+                The default value of <see cref="P:PatternRecognition.FingerprintRecognition.Core.Minutia.MinutiaType"/> is <see cref="F:PatternRecognition.FingerprintRecognition.Core.MinutiaType.Unknown"/>.
+            </remarks>
+            <param name="x">
+                The horizontal position of the minutia.
+            </param>
+            <param name="y">
+                The vertical position of the minutia.
+            </param>
+            <param name="angle">
+                The angle of the minutia.
+            </param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Minutia.GetHashCode">
+            <summary>
+                Returns a hash code for the current minutia.
+            </summary>
+            <remarks>
+                When building hash code, this method stores value X in the left most 11 bits; value Y, in the next 11 bits; value Angle, in the next 8 bits; and value MinutiaType, in the last 2 bits. Therefore, this method could be ineffective for values of X or Y greater than 2047.
+            </remarks>
+            <returns>
+                A hash code for the current minutia.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Minutia.op_Equality(PatternRecognition.FingerprintRecognition.Core.Minutia,PatternRecognition.FingerprintRecognition.Core.Minutia)">
+            <summary>
+                Determines whether two specified minutiae have the same property values.
+            </summary>
+            <param name="m1">A minutia.</param>
+            <param name="m2">A minutia.</param>
+            <returns>
+                True if every property value of <paramref name="m1"/> is equal to the respective property value of <paramref name="m2"/>; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.Minutia.op_Inequality(PatternRecognition.FingerprintRecognition.Core.Minutia,PatternRecognition.FingerprintRecognition.Core.Minutia)">
+            <summary>
+                Determines whether two specified minutiae have different property values.
+            </summary>
+            <param name="m1">A minutia.</param>
+            <param name="m2">A minutia.</param>
+            <returns>
+                True if every property value of <paramref name="m1"/> is different from the respective property value of <paramref name="m2"/>; otherwise, false.
+            </returns>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.Minutia.X">
+            <summary>
+                Gets or sets the horizontal position of the minutia.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.Minutia.Y">
+            <summary>
+                Gets or sets the vertical position of the minutia.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.Minutia.Angle">
+            <summary>
+                Gets or sets the angle of the minutia in radians.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.Minutia.MinutiaType">
+            <summary>
+                Gets or sets the minutia type.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.Minutia.Flag">
+            <summary>
+                Allows flagging the minutia;
+            </summary>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.MinutiaPair">
+            <summary>
+                Utility class used to store two minutiae and its matching value.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.QueryMtia">
+            <summary>
+                Gets or sets a minutia from the query fingerprint.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.TemplateMtia">
+            <summary>
+                Gets or sets a minutia from the template fingerprint.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.MatchingValue">
+            <summary>
+                Gets or sets the matching value of the two minutiae.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.GetHashCode">
+            <summary>
+                Returns a hash code for the current <see cref="T:PatternRecognition.FingerprintRecognition.Core.MinutiaPair"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.op_Equality(PatternRecognition.FingerprintRecognition.Core.MinutiaPair,PatternRecognition.FingerprintRecognition.Core.MinutiaPair)">
+            <summary>
+                Determines whether two specified pairs have the same minutiae.
+            </summary>
+            <param name="mp1">A minutia pair.</param>
+            <param name="mp2">A minutia pair.</param>
+            <returns>
+                True if the <see cref="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.QueryMtia"/> objects of the specified pairs have equal values and the <see cref="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.TemplateMtia"/> objects have equal values.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.op_Inequality(PatternRecognition.FingerprintRecognition.Core.MinutiaPair,PatternRecognition.FingerprintRecognition.Core.MinutiaPair)">
+            <summary>
+                Determines whether two specified pairs have different minutiae.
+            </summary>
+            <param name="mp1">A minutia pair.</param>
+            <param name="mp2">A minutia pair.</param>
+            <returns>
+                True if the <see cref="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.QueryMtia"/> objects of the specified pairs have different values or the <see cref="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.TemplateMtia"/> objects have different values.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.Equals(PatternRecognition.FingerprintRecognition.Core.MinutiaPair)">
+            <summary>
+                Determines wheter the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.MinutiaPair"/> and the current object have the same minutiae. 
+            </summary>
+            <param name="obj">
+                The <see cref="T:PatternRecognition.FingerprintRecognition.Core.MinutiaPair"/> to compare with the current object.
+            </param>
+            <returns>
+                True if the <see cref="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.QueryMtia"/> and <see cref="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.TemplateMtia"/> objects of the specified pair have the same values as the <see cref="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.QueryMtia"/> and <see cref="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.TemplateMtia"/> objects of the current object respectively.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.Equals(System.Object)">
+            <summary>
+                Determines wheter the specified object and the current <see cref="T:PatternRecognition.FingerprintRecognition.Core.MinutiaPair"/> have the same minutiae. 
+            </summary>
+            <param name="obj">
+                The object to compare with the current <see cref="T:PatternRecognition.FingerprintRecognition.Core.MinutiaPair"/>.
+            </param>
+            <returns>
+                True if the <see cref="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.QueryMtia"/> and <see cref="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.TemplateMtia"/> objects of the specified pair have the same values as the <see cref="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.QueryMtia"/> and <see cref="P:PatternRecognition.FingerprintRecognition.Core.MinutiaPair.TemplateMtia"/> objects of the current object respectively.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.MtiaEuclideanDistance">
+            <summary>
+                Exposes a method to compute Euclidean distance between two minutiae.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.MtiaEuclideanDistance.Compare(PatternRecognition.FingerprintRecognition.Core.Minutia,PatternRecognition.FingerprintRecognition.Core.Minutia)">
+            <summary>
+                Computes Euclidean distance between the specified minutiae.
+            </summary>
+            <param name="m0">A minutia.</param>
+            <param name="m1">A minutia.</param>
+            <returns>
+                Distance computed from the specified minutiae.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.OrientationImageSerializer">
+            <summary>
+                Allows saving and retrieving instances of <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/>.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.OrientationImageSerializer.ToByteArray(PatternRecognition.FingerprintRecognition.Core.OrientationImage)">
+            <summary>
+                Encodes the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> into a byte array.
+            </summary>
+            <remarks>
+                This codification stores <see cref="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.Width"/> in the first byte; <see cref="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.Height"/> in the second byte; <see cref="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.Width"/> in the third byte; and uses one byte for each orientation value. Therefore, this method is ineffective for values of <see cref="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.WindowSize"/>,  <see cref="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.Height"/> and <see cref="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.Width"/> greater than 255.
+            </remarks>
+            <param name="orImg">The <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> which is going to be encoded to a byte array.</param>
+            <returns>The byte array containing the encoded <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/>.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.OrientationImageSerializer.FromByteArray(System.Byte[])">
+            <summary>
+                Decodes an <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> from a byte array.
+            </summary>
+            <remarks>
+                This codification stores <see cref="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.Width"/> in the first byte; <see cref="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.Height"/> in the second byte; <see cref="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.Width"/> in the third byte; and uses one byte for each orientation value. Therefore, this method is ineffective for values of <see cref="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.WindowSize"/>,  <see cref="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.Height"/> and <see cref="P:PatternRecognition.FingerprintRecognition.Core.OrientationImage.Width"/> greater than 255.
+            </remarks>
+            <param name="bytes">The byte array containing the encoded <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/>.</param>
+            <returns>The <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> decoded from the specified byte array.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.OrientationImageSerializer.Serialize(System.String,PatternRecognition.FingerprintRecognition.Core.OrientationImage)">
+            <summary>
+                Save the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> to the specified file name.
+            </summary>
+            <remarks>
+                Before saving, the <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> is encoded using the method <see cref="M:PatternRecognition.FingerprintRecognition.Core.OrientationImageSerializer.ToByteArray(PatternRecognition.FingerprintRecognition.Core.OrientationImage)"/>.
+            </remarks>
+            <param name="fileName">The file name where the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> will be saved.</param>
+            <param name="orImg">The <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> to be saved.</param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.OrientationImageSerializer.Deserialize(System.String)">
+            <summary>
+                Load the <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> saved in the specified file name.
+            </summary>
+            <remarks>
+                The <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> are decoded using method <see cref="M:PatternRecognition.FingerprintRecognition.Core.OrientationImageSerializer.FromByteArray(System.Byte[])"/>.
+            </remarks>
+            <param name="fileName">The file name where the<see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> is saved.</param>
+            <returns>The <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> loaded from file.</returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository">
+            <summary>
+                Used to store and retrieve resources.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.ResourceRepository.ResourcePath">
+            <summary>
+                Gets or sets the path where resources are stored.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.ResourceRepository.#ctor(System.String)">
+            <summary>
+                Initialize a <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/> with the specified path.
+            </summary>
+            <param name="resourcePath">The path where resources are stored.</param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.ResourceRepository.GetFullPath(System.String)">
+            <summary>
+                Gets the full path where resource with the specified name is found.
+            </summary>
+            <param name="resourceName">The name of the resource which full path is requested.</param>
+            <returns>The full path where resource with the specified name is found.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.ResourceRepository.RetrieveResource(System.String)">
+            <summary>
+                Retrieves a byte array containing the resource with the specified name.
+            </summary>
+            <param name="resourceName">The name of the resource which is being requested.</param>
+            <returns>A byte array containing the requested resource.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.ResourceRepository.RetrieveObjectResource(System.String)">
+            <summary>
+                Retrieves an object containing the resource with the specified name.
+            </summary>
+            <param name="resourceName">The name of the resource which is being requested.</param>
+            <returns>An object containing the requested resource.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.ResourceRepository.StoreResource(System.String,System.Byte[])">
+            <summary>
+                Store the specified byte array with the specified resource name.
+            </summary>
+            <param name="resourceName">The name of the resource to be stored.</param>
+            <param name="resource">The byte array containing the resource to be stored.</param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.ResourceRepository.StoreResource(System.String,System.Object)">
+            <summary>
+                Store the specified object with the specified resource name.
+            </summary>
+            <param name="resourceName">The name of the resource to be stored.</param>
+            <param name="resource">The object containing the resource to be stored.</param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.ResourceRepository.ResourceExists(System.String)">
+            <summary>
+                Determines whether the resource with the specified name exits.
+            </summary>
+            <param name="resourceName">The name of the resource.</param>
+            <returns>True if the resource with the specified name exits; otherwise, false.</returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage">
+            <summary>
+                Represents a skeleton image.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.#ctor(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+                Initialize an <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> from the specified byte array, with the specified width and height.
+            </summary>
+            <param name="img">
+                A byte array containing the image pixel data.
+            </param>
+            <param name="width">
+                The width of the skeleton image.
+            </param>
+            <param name="height">
+                The height of the skeleton image.
+            </param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.#ctor(System.Byte[0:,0:],System.Int32,System.Int32)">
+            <summary>
+                Initialize an <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> from the specified byte matrix, with the specified width and height.
+            </summary>
+            <param name="img">
+                A byte matrix containing the image pixel data.
+            </param>
+            <param name="width">
+                The width of the skeleton image.
+            </param>
+            <param name="height">
+                The height of the skeleton image.
+            </param>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.ConvertToBitmap">
+            <summary>
+                Converts the current <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> object to <see cref="T:System.Drawing.Bitmap"/>.
+            </summary>
+            <returns>
+                The computed <see cref="T:System.Drawing.Bitmap"/>.
+            </returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.RidgeCount(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Determines the ridge count between the specified points.
+            </summary>
+            <param name="x0">The x component of the first point.</param>
+            <param name="y0">The y component of the first point.</param>
+            <param name="x1">The x component of the second point.</param>
+            <param name="y1">The y component of the second point.</param>
+            <returns>The ridge count between the specified points.</returns>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.Item(System.Int32,System.Int32)">
+            <summary>
+                Gets the gray intensity at the specified pixel coordinates.
+            </summary>
+            <param name="row">The row of the specified pixel.</param>
+            <param name="col">The column of the specified pixel.</param>
+            <returns>
+                The gray intensity at the specified pixel coordinates.
+            </returns>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.Width">
+            <summary>
+                Gets or sets the width of the skeleton image.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Core.SkeletonImage.Height">
+            <summary>
+                Gets or sets the height of the skeleton image.
+            </summary>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.ResourceProviders.MinutiaListProvider">
+            <summary>
+                Allows retrieving minutia list from a <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.MinutiaListProvider.PatternRecognition#FingerprintRecognition#Core#IResourceProvider#GetResource(System.String,PatternRecognition.FingerprintRecognition.Core.ResourceRepository)">
+            <summary>
+                Gets minutia list from the specified fingerprint and <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+            <param name="fingerprint">The fingerprint which minutia list is being retrieved.</param>
+            <param name="repository">The object used to store and retrieve resources.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the fingerprint is invalid.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the minutia list extractor is not assigned.</exception>
+            <returns>The retrieved minutia list.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.MinutiaListProvider.GetResource(System.String,PatternRecognition.FingerprintRecognition.Core.ResourceRepository)">
+            <summary>
+                Gets minutia list from the specified fingerprint and <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+            <param name="fingerprint">The fingerprint which minutia list is being retrieved.</param>
+            <param name="repository">The object used to store and retrieve resources.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the fingerprint is invalid.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the minutia list extractor is not assigned.</exception>
+            <returns>The retrieved minutia list.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.MinutiaListProvider.GetSignature">
+            <summary>
+                Gets the signature of the <see cref="T:PatternRecognition.FingerprintRecognition.ResourceProviders.MinutiaListProvider"/>.
+            </summary>
+            <returns>It returns a string formed by the name of the property <see cref="P:PatternRecognition.FingerprintRecognition.ResourceProviders.MinutiaListProvider.MinutiaListExtractor"/> concatenated with ".mta".</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.MinutiaListProvider.IsResourcePersistent">
+            <summary>
+                Determines whether the provided minutia list is persistent.
+            </summary>
+            <returns>Always returns true.</returns>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.ResourceProviders.MinutiaListProvider.MinutiaListExtractor">
+            <summary>
+                Used to extract minutia list in case that the resource have not being saved.
+            </summary>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.ResourceProviders.OrientationImageProvider">
+            <summary>
+                Allows retrieving orientation image from a <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.OrientationImageProvider.PatternRecognition#FingerprintRecognition#Core#IResourceProvider#GetResource(System.String,PatternRecognition.FingerprintRecognition.Core.ResourceRepository)">
+            <summary>
+                Gets orientation image from the specified fingerprint and <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+            <param name="fingerprint">The fingerprint which orientation image is being retrieved.</param>
+            <param name="repository">The object used to store and retrieve resources.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the fingerprint is invalid.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the orientation image extractor is not assigned.</exception>
+            <returns>The retrieved orientation image.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.OrientationImageProvider.GetResource(System.String,PatternRecognition.FingerprintRecognition.Core.ResourceRepository)">
+            <summary>
+                Gets orientation image from the specified fingerprint and <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+            <param name="fingerprint">The fingerprint which orientation image are being retrieved.</param>
+            <param name="repository">The object used to store and retrieve resources.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the fingerprint is invalid.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the orientation image extractor is not assigned.</exception>
+            <returns>The retrieved orientation image.</returns>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.ResourceProviders.OrientationImageProvider.OrientationImageExtractor">
+            <summary>
+                Used to extract orientation image in case that the resource have not being saved.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.OrientationImageProvider.GetSignature">
+            <summary>
+                Gets the signature of the <see cref="T:PatternRecognition.FingerprintRecognition.ResourceProviders.OrientationImageProvider"/>.
+            </summary>
+            <returns>It returns a string formed by the name of the property <see cref="P:PatternRecognition.FingerprintRecognition.ResourceProviders.OrientationImageProvider.OrientationImageExtractor"/> concatenated with ".ori".</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.OrientationImageProvider.IsResourcePersistent">
+            <summary>
+                Determines whether the provided orientation image is persistent.
+            </summary>
+            <returns>Always returns true.</returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.ResourceProviders.SkeletonImageProvider">
+            <summary>
+                Allows retrieving skeleton image from a <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.ResourceProviders.SkeletonImageProvider.SkeletonImageExtractor">
+            <summary>
+                Used to extract skeleton image in case that the resource have not being saved.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.SkeletonImageProvider.PatternRecognition#FingerprintRecognition#Core#IResourceProvider#GetResource(System.String,PatternRecognition.FingerprintRecognition.Core.ResourceRepository)">
+            <summary>
+                Gets skeleton image from the specified fingerprint and <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+            <param name="fingerprint">The fingerprint which skeleton image is being retrieved.</param>
+            <param name="repository">The object used to store and retrieve resources.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the fingerprint is invalid.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the skeleton image extractor is not assigned.</exception>
+            <returns>The retrieved skeleton image.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.SkeletonImageProvider.GetResource(System.String,PatternRecognition.FingerprintRecognition.Core.ResourceRepository)">
+            <summary>
+                Gets skeleton image from the specified fingerprint and <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceRepository"/>.
+            </summary>
+            <param name="fingerprint">The fingerprint which skeleton image are being retrieved.</param>
+            <param name="repository">The object used to store and retrieve resources.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the fingerprint is invalid.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the skeleton image extractor is not assigned.</exception>
+            <returns>The retrieved skeleton image.</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.SkeletonImageProvider.GetSignature">
+            <summary>
+                Gets the signature of the <see cref="T:PatternRecognition.FingerprintRecognition.ResourceProviders.SkeletonImageProvider"/>.
+            </summary>
+            <returns>It returns a string formed by the name of the property <see cref="P:PatternRecognition.FingerprintRecognition.ResourceProviders.SkeletonImageProvider.SkeletonImageExtractor"/> concatenated with ".ski".</returns>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.ResourceProviders.SkeletonImageProvider.IsResourcePersistent">
+            <summary>
+                Determines whether the provided <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> is persistent.
+            </summary>
+            <returns>Always returns true.</returns>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.FeatureDisplay.OrientationImageDisplay">
+            <summary>
+                Used to paint orientation image.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.FeatureDisplay.OrientationImageDisplay.Show(PatternRecognition.FingerprintRecognition.Core.OrientationImage,System.Drawing.Graphics)">
+            <summary>
+                Paints the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.OrientationImage"/> using the specified <see cref="T:System.Drawing.Graphics"/>.
+            </summary>
+            <param name="orImg">The orientation image to be painted.</param>
+            <param name="g">The <see cref="T:System.Drawing.Graphics"/> object used to paint the orientation image.</param>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.FeatureDisplay.MinutiaeDisplay">
+            <summary>
+                Used to paint minutiae.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.FeatureDisplay.MinutiaeDisplay.Show(System.Collections.Generic.List{PatternRecognition.FingerprintRecognition.Core.Minutia},System.Drawing.Graphics)">
+            <summary>
+                Paints the specified minutiae using the specified <see cref="T:System.Drawing.Graphics"/>.
+            </summary>
+            <param name="features">The minutiae to be painted.</param>
+            <param name="g">The <see cref="T:System.Drawing.Graphics"/> object used to paint the minutiae.</param>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.FeatureDisplay.SkeletonImageDisplay">
+            <summary>
+                Used to paint skeleton image.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.FeatureDisplay.SkeletonImageDisplay.Show(PatternRecognition.FingerprintRecognition.Core.SkeletonImage,System.Drawing.Graphics)">
+            <summary>
+                Paints the specified <see cref="T:PatternRecognition.FingerprintRecognition.Core.SkeletonImage"/> using the specified <see cref="T:System.Drawing.Graphics"/>.
+            </summary>
+            <param name="skImg">
+                The skeleton image to be painted.
+            </param>
+            <param name="g">
+                The <see cref="T:System.Drawing.Graphics"/> object used to paint the orientation image.
+            </param>
+        </member>
+        <member name="T:PatternRecognition.Core.IBooleanSimilarity`1">
+            <summary>
+                Represents a boolean similarity comparison function.
+            </summary>
+            <remarks>
+                <para>
+                    A boolean similarity is a function that compares objects and returns true is both objects are equal, otherwise it returns false.
+                </para>
+            </remarks>
+            <typeparam name="T">
+                The type of the objects that can be compared.
+            </typeparam>
+        </member>
+        <member name="M:PatternRecognition.Core.IBooleanSimilarity`1.Compare(`0,`0)">
+            <summary>
+                Compute the similarity between two objects.
+            </summary>
+            <param name="source">
+                An object to compare.
+            </param>
+            <param name="compareTo">
+                The object to compare with.
+            </param>
+            <returns>
+                The similarity boolean value.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.Core.IDissimilarity`1">
+            <summary>
+                Represents a dissimilarity comparison function.
+            </summary>
+            <remarks>
+                <para>
+                    A dissimilarity is a function that compares objects and returns a similarity degree of these objects. The lower returned value, the greater similarity.
+                </para>
+            </remarks>
+            <typeparam name="T">
+                The type of the objects that can be compared.
+            </typeparam>
+        </member>
+        <member name="M:PatternRecognition.Core.IDissimilarity`1.Compare(`0,`0)">
+            <summary>
+                Compute the dissimilarity between two objects.
+            </summary>
+            <param name="source">
+                One object to compare.
+            </param>
+            <param name="compareTo">
+                One object to compare with.
+            </param>
+            <returns>
+                The dissimilarity value.
+            </returns>
+        </member>
+        <member name="T:PatternRecognition.Core.ISimilarity`1">
+            <summary>
+                Represents a similarity comparison function.
+            </summary>
+            <remarks>
+                <para>
+                    A similarity is a function that compares objects and returns a similarity degree of these objects. The higher returned value, the greater similarity.
+                </para>
+            </remarks>
+            <typeparam name="T">
+                The type of the objects that can be compared.
+            </typeparam>
+        </member>
+        <member name="M:PatternRecognition.Core.ISimilarity`1.Compare(`0,`0)">
+            <summary>
+                Compute the similarity between two objects.
+            </summary>
+            <param name="source">
+                One object to compare.
+            </param>
+            <param name="compareTo">
+                The object to compare with.
+            </param>
+            <returns>
+                The similarity value.
+            </returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\ImageProcessingTools\bin\Release\ImageProcessingTools.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\ImageProcessingTools\bin\Release\ImageProcessingTools.pdb
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\ImageProcessingTools\bin\Release\ImageProcessingTools.XML
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\ImageProcessingTools\obj\Release\ImageProcessingTools.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\ImageProcessingTools\obj\Release\ImageProcessingTools.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\ImageProcessingTools\obj\Release\ImageProcessingTools.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\ImageProcessingTools\bin\Release\ImageProcessingTools.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\ImageProcessingTools\bin\Release\ImageProcessingTools.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\ImageProcessingTools\bin\Release\ImageProcessingTools.XML
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\ImageProcessingTools\obj\Release\ImageProcessingTools.csprojResolveAssemblyReference.cache
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\ImageProcessingTools\obj\Release\ImageProcessingTools.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\ImageProcessingTools\obj\Release\ImageProcessingTools.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\ImageProcessingTools\obj\Release\ImageProcessingTools.pdb

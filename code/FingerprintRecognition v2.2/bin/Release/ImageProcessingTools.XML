@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ImageProcessingTools</name>
+    </assembly>
+    <members>
+        <member name="P:ImageProcessingTools.GaussianBlur.Height">
+            <summary>
+                Gets the value 5 which is the height of the filter.
+            </summary>
+        </member>
+        <member name="P:ImageProcessingTools.GaussianBlur.Width">
+            <summary>
+                Gets the value 5 which is the width of the filter.
+            </summary>
+        </member>
+        <member name="P:ImageProcessingTools.GaussianBlur.Factor">
+            <summary>
+                Gets the value 40 which is the factor to divide the value before assigning to the pixel.
+            </summary>
+        </member>
+        <member name="T:ImageProcessingTools.SobelVerticalFilter">
+            <summary>
+                A 3x3 Sobel filter for vertical edge detection.
+            </summary>
+            <remarks>This filter has the following matrix: {{1,0,-1},{2,0,-2},{1,0,-1}}.</remarks>
+            <seealso cref="T:ImageProcessingTools.SobelVerticalFilter"/>
+        </member>
+        <member name="M:ImageProcessingTools.SobelVerticalFilter.#ctor">
+            <summary>
+                 Initialize a <see cref="T:ImageProcessingTools.SobelVerticalFilter"/> with the matrix {{1,0,-1},{2,0,-2},{1,0,-1}}.
+            </summary>
+        </member>
+        <member name="P:ImageProcessingTools.SobelVerticalFilter.Height">
+            <summary>
+                Gets the value 3 which is the height of the filter.
+            </summary>
+        </member>
+        <member name="P:ImageProcessingTools.SobelVerticalFilter.Width">
+            <summary>
+                Gets the value 3 which is the width of the filter.
+            </summary>
+        </member>
+        <member name="P:ImageProcessingTools.SobelVerticalFilter.Factor">
+            <summary>
+                Gets the value 1 which is the factor to divide the value before assigning to the pixel.
+            </summary>
+        </member>
+        <member name="T:ImageProcessingTools.ConvolutionFilter">
+            <summary>
+                Represents a convolution filter.
+            </summary>
+        </member>
+        <member name="M:ImageProcessingTools.ConvolutionFilter.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Initialize a <see cref="T:ImageProcessingTools.ConvolutionFilter"/> with the specified width, height and factor.
+            </summary>
+            <param name="width">The width of the filter.</param>
+            <param name="height">The height of the filter.</param>
+            <param name="factor">The factor to divide the value before assigining to the pixel.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the specified with or height are not an odd number.</exception>
+        </member>
+        <member name="P:ImageProcessingTools.ConvolutionFilter.Item(System.Int32,System.Int32)">
+            <summary>
+                Gets or sets the value of a pixel in the filter.
+            </summary>
+            <param name="row">The row of the specified pixel.</param>
+            <param name="column">The column of the specified pixel.</param>
+            <returns>The value of the filter in the specified pixel.</returns>
+        </member>
+        <member name="P:ImageProcessingTools.ConvolutionFilter.Height">
+            <summary>
+                Gets the height of the filter.
+            </summary>
+        </member>
+        <member name="P:ImageProcessingTools.ConvolutionFilter.Width">
+            <summary>
+                Gets the width of the filter.
+            </summary>
+        </member>
+        <member name="P:ImageProcessingTools.ConvolutionFilter.Factor">
+            <summary>
+                A factor to divide the value before assigning to the pixel.
+            </summary>
+        </member>
+        <member name="M:ImageProcessingTools.ConvolutionFilter.Apply(ImageProcessingTools.ImageMatrix)">
+            <summary>
+                Applies the current convolution filter to the specified <see cref="T:ImageProcessingTools.ImageMatrix"/>.
+            </summary>
+            <param name="img">
+                The <see cref="T:ImageProcessingTools.ImageMatrix"/> where the convolution filter will be applied.
+            </param>
+            <returns>
+                A new <see cref="T:ImageProcessingTools.ImageMatrix"/> resulting from applying the current filter to the specified <see cref="T:ImageProcessingTools.ImageMatrix"/>.
+            </returns>
+        </member>
+        <member name="F:ImageProcessingTools.ConvolutionFilter.pixels">
+            <summary>
+                The matrix of the filter.
+            </summary>
+        </member>
+        <member name="M:ImageProcessingTools.ConvolutionFilter.#ctor">
+            <summary>
+                A base constructor to be used in concrete classes.
+            </summary>
+        </member>
+        <member name="T:ImageProcessingTools.ImageBasicTools">
+            <summary>
+                Provides basic functions to process images.
+            </summary>
+        </member>
+        <member name="M:ImageProcessingTools.ImageBasicTools.Invert(System.Drawing.Bitmap)">
+            <summary>
+                Invert the specified image.
+            </summary>
+            <remarks>
+                The specified image must contain 24 bits per pixel.
+            </remarks>
+            <param name="bmp">The image to invert.</param>
+        </member>
+        <member name="M:ImageProcessingTools.ImageBasicTools.ConvertToGrayScale(System.Drawing.Bitmap)">
+            <summary>
+                Convert to gray scale the specified image.
+            </summary>
+            <remarks>
+                The specified image must contain 24 bits per pixel.
+            </remarks>
+            <param name="bmp">The image to convert to gray scale.</param>
+        </member>
+        <member name="T:ImageProcessingTools.SobelHorizontalFilter">
+            <summary>
+                A 3x3 Sobel filter for horizontal edge detection.
+            </summary>
+            <remarks>This filter has the following matrix: {{1,2,1},{0,0,0},{-1,-2,-1}}.</remarks>
+            <seealso cref="T:ImageProcessingTools.SobelVerticalFilter"/>
+        </member>
+        <member name="M:ImageProcessingTools.SobelHorizontalFilter.#ctor">
+            <summary>
+                 Initialize a <see cref="T:ImageProcessingTools.SobelHorizontalFilter"/> with the matrix {{1,2,1},{0,0,0},{-1,-2,-1}}.
+            </summary>
+        </member>
+        <member name="P:ImageProcessingTools.SobelHorizontalFilter.Height">
+            <summary>
+                Gets the value 3 which is the height of the filter.
+            </summary>
+        </member>
+        <member name="P:ImageProcessingTools.SobelHorizontalFilter.Width">
+            <summary>
+                Gets the value 3 which is the width of the filter.
+            </summary>
+        </member>
+        <member name="P:ImageProcessingTools.SobelHorizontalFilter.Factor">
+            <summary>
+                Gets the value 1 which is the factor to divide the value before assigning to the pixel.
+            </summary>
+        </member>
+        <member name="T:ImageProcessingTools.ImageMatrix">
+            <summary>
+                A class to represent a gray scale image using a matrix.
+            </summary>
+        </member>
+        <member name="M:ImageProcessingTools.ImageMatrix.#ctor(System.Drawing.Bitmap)">
+            <summary>
+                Initialize the <see cref="T:ImageProcessingTools.ImageMatrix"/> from the specied image.
+            </summary>
+            <remarks>
+                <para>
+                    The specified image must contain 24 bits per pixel.
+                </para>
+                <para>
+                    The new object is built using the image in gray scale.
+                </para>
+            </remarks>
+            <param name="bmp">The image to convert to gray scale matrix.</param>
+        </member>
+        <member name="M:ImageProcessingTools.ImageMatrix.#ctor(System.Int32,System.Int32)">
+            <summary>
+                Initialize a new <see cref="T:ImageProcessingTools.ImageMatrix"/> with the specified width and height.
+            </summary>
+            <param name="width">
+                The width of the new <see cref="T:ImageProcessingTools.ImageMatrix"/>.
+            </param>
+            <param name="height">
+                The height of the new <see cref="T:ImageProcessingTools.ImageMatrix"/>.
+            </param>
+        </member>
+        <member name="P:ImageProcessingTools.ImageMatrix.Item(System.Int32,System.Int32)">
+            <summary>
+                Gets or sets the gray scale value in the specified pixel.
+            </summary>
+            <param name="row">
+                The vertical component of the pixel coordinate.
+            </param>
+            <param name="column">
+                The horizontal component of the pixel coordinate.
+            </param>
+            <returns>
+                The gray scale value in the specified pixel.
+            </returns>
+        </member>
+        <member name="P:ImageProcessingTools.ImageMatrix.Height">
+            <summary>
+                The height of the current <see cref="T:ImageProcessingTools.ImageMatrix"/>.
+            </summary>
+        </member>
+        <member name="P:ImageProcessingTools.ImageMatrix.Width">
+            <summary>
+                The width of the current <see cref="T:ImageProcessingTools.ImageMatrix"/>.
+            </summary>
+        </member>
+        <member name="M:ImageProcessingTools.ImageMatrix.ToBitmap">
+            <summary>
+                Convert the <see cref="T:ImageProcessingTools.ImageMatrix"/> to Bitmap.
+            </summary>
+            <remarks>
+                The returned image is in gray scale with 24 bits per pixel.
+            </remarks>
+            <returns>The computed Bitmap</returns>
+        </member>
+    </members>
+</doc>

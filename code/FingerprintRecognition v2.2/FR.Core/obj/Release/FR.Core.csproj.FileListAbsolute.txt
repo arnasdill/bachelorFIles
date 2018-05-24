@@ -1,0 +1,15 @@
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.Core.XML
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.Core.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.Core.pdb
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Core\obj\Release\FR.Core.csprojResolveAssemblyReference.cache
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Core\obj\Release\FR.Core.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Core\obj\Release\FR.Core.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Core\obj\Release\FR.Core.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.Core.XML
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.Core.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.Core.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Core\obj\Release\FR.Core.csprojResolveAssemblyReference.cache
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Core\obj\Release\FR.Core.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Core\obj\Release\FR.Core.csproj.CopyComplete
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Core\obj\Release\FR.Core.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Core\obj\Release\FR.Core.pdb

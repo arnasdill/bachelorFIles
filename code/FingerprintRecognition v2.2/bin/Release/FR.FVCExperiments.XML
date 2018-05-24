@@ -1,0 +1,556 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FR.FVCExperiments</name>
+    </assembly>
+    <members>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB4_B">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB4_B from FVC2004.
+            </summary>
+            <remarks>
+                <para>
+                    The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false matching fingerprints and the other containing the false not matching fingerprints.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="T:PatternRecognition.FingerprintRecognition.Core.Matcher`1"/>, <see cref="!:ResourceProvider"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB3_B">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB3_B from FVC2004.
+            </summary>
+            <remarks>
+                <para>
+                    The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false matching fingerprints and the other containing the false not matching fingerprints.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="T:PatternRecognition.FingerprintRecognition.Core.Matcher`1"/>, <see cref="!:ResourceProvider"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB2_B">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB2_B from FVC2004.
+            </summary>
+            <remarks>
+                <para>
+                    The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false matching fingerprints and the other containing the false not matching fingerprints.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="T:PatternRecognition.FingerprintRecognition.Core.Matcher`1"/>, <see cref="!:ResourceProvider"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB1_B">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB1_B from FVC2004.
+            </summary>
+            <remarks>
+                <para>
+                    The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false matching fingerprints and the other containing the false not matching fingerprints.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="T:PatternRecognition.FingerprintRecognition.Core.Matcher`1"/>, <see cref="!:ResourceProvider"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB4_B">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB4_B from FVC2002.
+            </summary>
+            <remarks>
+                <para>
+                    The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false matching fingerprints and the other containing the false not matching fingerprints.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="!:Matcher"/>, <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceProvider`1"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB3_B">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB3_B from FVC2002.
+            </summary>
+            <remarks>
+                <para>
+                    The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false matching fingerprints and the other containing the false not matching fingerprints.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="!:Matcher"/>, <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceProvider`1"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB2_B">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB2_B from FVC2002.
+            </summary>
+            <remarks>
+                <para>
+                    The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false matching fingerprints and the other containing the false not matching fingerprints.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="!:Matcher"/>, <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceProvider`1"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB1_B">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB1_B from FVC2002.
+            </summary>
+            <remarks>
+                <para>
+                    The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false matching fingerprints and the other containing the false not matching fingerprints.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="!:Matcher"/>, <see cref="T:PatternRecognition.FingerprintRecognition.Core.ResourceProvider`1"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2000_DB4_B">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB4_B from FVC2000.
+            </summary>
+            <remarks>
+                <para>
+                    The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false matching fingerprints and the other containing the false not matching fingerprints.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="!:Matcher"/>, <see cref="!:ResourceProvider"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2000_DB3_B">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB3_B from FVC2000.
+            </summary>
+            <remarks>
+                <para>
+                    The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false matching fingerprints and the other containing the false not matching fingerprints.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="!:Matcher"/>, <see cref="!:ResourceProvider"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2000_DB2_B">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB2_B from FVC2000.
+            </summary>
+            <remarks>
+                <para>
+                    The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false matching fingerprints and the other containing the false not matching fingerprints.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="!:Matcher"/>, <see cref="!:ResourceProvider"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2000_DB1_B">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB1_B from FVC2000.
+            </summary>
+            <remarks>
+                <para>
+                    The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false matching fingerprints and the other containing the false not matching fingerprints.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="!:Matcher"/>, <see cref="!:ResourceProvider"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB4_A">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB4_A from FVC2004.
+            </summary>
+            <remarks>
+                <para>
+                    This experiment uses the evaluation protocol of the Fingerprint Verification Competitions [1]. The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false fingerprint matches and the other containing the false not matches.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="!:Matcher"/>, <see cref="!:ResourceProvider"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+                <para>
+                    References:
+                </para>
+                <para>
+                    <list type="number">
+                        <item>
+                           R. Cappelli, D. Maio, D. Maltoni, J. L. Wayman, and A. K. Jain, "Performance evaluation of fingerprint verification systems," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 28, pp. 3-18, 2006.
+                        </item>
+                    </list>
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB3_A">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB3_A from FVC2004.
+            </summary>
+            <remarks>
+                <para>
+                    This experiment uses the evaluation protocol of the Fingerprint Verification Competitions [1]. The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false fingerprint matches and the other containing the false not matches.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="!:Matcher"/>, <see cref="!:ResourceProvider"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+                <para>
+                    References:
+                </para>
+                <para>
+                    <list type="number">
+                        <item>
+                           R. Cappelli, D. Maio, D. Maltoni, J. L. Wayman, and A. K. Jain, "Performance evaluation of fingerprint verification systems," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 28, pp. 3-18, 2006.
+                        </item>
+                    </list>
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB2_A">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB2_A from FVC2004.
+            </summary>
+            <remarks>
+                <para>
+                    This experiment uses the evaluation protocol of the Fingerprint Verification Competitions [1]. The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false fingerprint matches and the other containing the false not matches.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="!:Matcher"/>, <see cref="!:ResourceProvider"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+                <para>
+                    References:
+                </para>
+                <para>
+                    <list type="number">
+                        <item>
+                           R. Cappelli, D. Maio, D. Maltoni, J. L. Wayman, and A. K. Jain, "Performance evaluation of fingerprint verification systems," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 28, pp. 3-18, 2006.
+                        </item>
+                    </list>
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB1_A">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB1_A from FVC2004.
+            </summary>
+            <remarks>
+                <para>
+                    This experiment uses the evaluation protocol of the Fingerprint Verification Competitions [1]. The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false fingerprint matches and the other containing the false not matches.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="!:Matcher"/>, <see cref="!:ResourceProvider"/> and <see cref="!:ResourcePath"/>. Optionally, you can set the property <see cref="!:StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+                <para>
+                    References:
+                </para>
+                <para>
+                    <list type="number">
+                        <item>
+                           R. Cappelli, D. Maio, D. Maltoni, J. L. Wayman, and A. K. Jain, "Performance evaluation of fingerprint verification systems," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 28, pp. 3-18, 2006.
+                        </item>
+                    </list>
+                </para>
+            </remarks>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB4A">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB4_A of competition FVC2004.
+            </summary>
+            <remarks>
+                <para>
+                    This experiment uses the evaluation protocol of the Fingerprint Verification Competitions [1]. The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false fingerprint matches and the other containing the false not matches.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB4A.Matcher"/>, <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB4A.ResourceProvider"/> and <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB4A.ResourcePath"/>. Optionally, you can set the property <see cref="E:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB4A.StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+                <para>
+                    References:
+                </para>
+                <para>
+                    <list type="number">
+                        <item>
+                           R. Cappelli, D. Maio, D. Maltoni, J. L. Wayman, and A. K. Jain, "Performance evaluation of fingerprint verification systems," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 28, pp. 3-18, 2006.
+                        </item>
+                    </list>
+                </para>
+            </remarks>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB4A.Matcher">
+            <summary>
+                The matcher to be evaluated.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB4A.ResourceProvider">
+            <summary>
+                Used to provide the features used by the specified matcher.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB4A.ResourcePath">
+            <summary>
+                The path where the resources are stored.
+            </summary>
+        </member>
+        <member name="E:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB4A.StatusEvent">
+            <summary>
+                Event that provides information about the experiment status.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB4A.Execute">
+             <summary>
+                 Executes the experiment.
+             </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown when the resource path is invalid, the matcher is not assigned or the resource provider is not assigned.</exception>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB3A">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB3_A of competition FVC2004.
+            </summary>
+            <remarks>
+                <para>
+                    This experiment uses the evaluation protocol of the Fingerprint Verification Competitions [1]. The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false fingerprint matches and the other containing the false not matches.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB3A.Matcher"/>, <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB3A.ResourceProvider"/> and <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB3A.ResourcePath"/>. Optionally, you can set the property <see cref="E:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB3A.StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+                <para>
+                    References:
+                </para>
+                <para>
+                    <list type="number">
+                        <item>
+                           R. Cappelli, D. Maio, D. Maltoni, J. L. Wayman, and A. K. Jain, "Performance evaluation of fingerprint verification systems," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 28, pp. 3-18, 2006.
+                        </item>
+                    </list>
+                </para>
+            </remarks>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB3A.Matcher">
+            <summary>
+                The matcher to be evaluated.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB3A.ResourceProvider">
+            <summary>
+                Used to provide the features used by the specified matcher.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB3A.ResourcePath">
+            <summary>
+                The path where the resources are stored.
+            </summary>
+        </member>
+        <member name="E:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB3A.StatusEvent">
+            <summary>
+                Event that provides information about the experiment status.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB3A.Execute">
+             <summary>
+                 Executes the experiment.
+             </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown when the resource path is invalid, the matcher is not assigned or the resource provider is not assigned.</exception>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB2A">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB2_A of competition FVC2004.
+            </summary>
+            <remarks>
+                <para>
+                    This experiment uses the evaluation protocol of the Fingerprint Verification Competitions [1]. The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false fingerprint matches and the other containing the false not matches.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB2A.Matcher"/>, <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB2A.ResourceProvider"/> and <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB2A.ResourcePath"/>. Optionally, you can set the property <see cref="E:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB2A.StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+                <para>
+                    References:
+                </para>
+                <para>
+                    <list type="number">
+                        <item>
+                           R. Cappelli, D. Maio, D. Maltoni, J. L. Wayman, and A. K. Jain, "Performance evaluation of fingerprint verification systems," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 28, pp. 3-18, 2006.
+                        </item>
+                    </list>
+                </para>
+            </remarks>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB2A.Matcher">
+            <summary>
+                The matcher to be evaluated.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB2A.ResourceProvider">
+            <summary>
+                Used to provide the features used by the specified matcher.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB2A.ResourcePath">
+            <summary>
+                The path where the resources are stored.
+            </summary>
+        </member>
+        <member name="E:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB2A.StatusEvent">
+            <summary>
+                Event that provides information about the experiment status.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB2A.Execute">
+             <summary>
+                 Executes the experiment.
+             </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown when the resource path is invalid, the matcher is not assigned or the resource provider is not assigned.</exception>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB1A">
+            <summary>
+                Allows testing a fingerprint matching algorithm in database DB1_A of competition FVC2004.
+            </summary>
+            <remarks>
+                <para>
+                    This experiment uses the evaluation protocol of the Fingerprint Verification Competitions [1]. The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false fingerprint matches and the other containing the false not matches.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB1A.Matcher"/>, <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB1A.ResourceProvider"/> and <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB1A.ResourcePath"/>. Optionally, you can set the property <see cref="E:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB1A.StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+                <para>
+                    References:
+                </para>
+                <para>
+                    <list type="number">
+                        <item>
+                           R. Cappelli, D. Maio, D. Maltoni, J. L. Wayman, and A. K. Jain, "Performance evaluation of fingerprint verification systems," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 28, pp. 3-18, 2006.
+                        </item>
+                    </list>
+                </para>
+            </remarks>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB1A.Matcher">
+            <summary>
+                The matcher to be evaluated.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB1A.ResourceProvider">
+            <summary>
+                Used to provide the features used by the specified matcher.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB1A.ResourcePath">
+            <summary>
+                The path where the resources are stored.
+            </summary>
+        </member>
+        <member name="E:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB1A.StatusEvent">
+            <summary>
+                Event that provides information about the experiment status.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB1A.Execute">
+             <summary>
+                 Executes the experiment.
+             </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown when the resource path is invalid, the matcher is not assigned or the resource provider is not assigned.</exception>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB_A">
+            <summary>
+                Abstract class containing the evaluation protocol for testing a fingerprint matching algorithm in databases DB1_A, DB2_A, DB3_A and DB4_A from FVC2004.
+            </summary>
+            <remarks>
+                <para>
+                    This experiment uses the evaluation protocol of the Fingerprint Verification Competitions [1]. The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false fingerprint matches and the other containing the false not matches.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB_A.Matcher"/>, <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB_A.ResourceProvider"/> and <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB_A.ResourcePath"/>. Optionally, you can set the property <see cref="E:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB_A.StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+                <para>
+                    References:
+                </para>
+                <para>
+                    <list type="number">
+                        <item>
+                           R. Cappelli, D. Maio, D. Maltoni, J. L. Wayman, and A. K. Jain, "Performance evaluation of fingerprint verification systems," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 28, pp. 3-18, 2006.
+                        </item>
+                    </list>
+                </para>
+            </remarks>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB1_A"/>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB2_A"/>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB3_A"/>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB4_A"/>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB_A.Matcher">
+            <summary>
+                The matcher to be evaluated.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB_A.ResourceProvider">
+            <summary>
+                Used to provide the features used by the specified matcher.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB_A.ResourcePath">
+            <summary>
+                The path where the resources are stored.
+            </summary>
+        </member>
+        <member name="E:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB_A.StatusEvent">
+            <summary>
+                Event that provides information about the experiment status.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB_A.Execute">
+             <summary>
+                 Executes the experiment.
+             </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown when the resource path is invalid, the matcher is not assigned or the resource provider is not assigned.</exception>
+        </member>
+        <member name="T:PatternRecognition.FingerprintRecognition.Experiments.FVC_DB_B">
+            <summary>
+                Abstract class containing an evaluation protocol for testing a fingerprint matching algorithm in databases DB1_B, DB2_B, DB3_B and DB4_B from FVC2000, FVC2002 and FVC2004.
+            </summary>
+            <remarks>
+                <para>
+                    The performance indicators computed in this experiments are: EER(%), FMR100(%), FMR1000(%), ZeroFMR(%), Time(ms) and ROC curves. This indicators are saved in a file which name is formed by the name of the matching algorithm concatenated with ".Summary.csv". This file is saved in a folder by the name of "Results" in the same folder where the fingerprints are stored. Two more files are saved, one file containing the false matching fingerprints and the other containing the false not matching fingerprints.
+                </para>
+                <para>
+                    In order to execute the experiment, you must set the properties <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC_DB_B.Matcher"/>, <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC_DB_B.ResourceProvider"/> and <see cref="P:PatternRecognition.FingerprintRecognition.Experiments.FVC_DB_B.ResourcePath"/>. Optionally, you can set the property <see cref="E:PatternRecognition.FingerprintRecognition.Experiments.FVC_DB_B.StatusEvent"/> in order to get updates concerning the status of the experiment.
+                </para>
+            </remarks>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2000_DB1_B"/>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2000_DB2_B"/>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2000_DB3_B"/>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2000_DB4_B"/>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB1_B"/>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB2_B"/>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB3_B"/>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2002_DB4_B"/>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB1_B"/>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB2_B"/>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB3_B"/>
+            <seealso cref="T:PatternRecognition.FingerprintRecognition.Experiments.FVC2004_DB4_B"/>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC_DB_B.Matcher">
+            <summary>
+                The matcher to be evaluated.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC_DB_B.ResourceProvider">
+            <summary>
+                Used to provide the features used by the specified matcher.
+            </summary>
+        </member>
+        <member name="P:PatternRecognition.FingerprintRecognition.Experiments.FVC_DB_B.ResourcePath">
+            <summary>
+                The path where the resources are stored.
+            </summary>
+        </member>
+        <member name="E:PatternRecognition.FingerprintRecognition.Experiments.FVC_DB_B.StatusEvent">
+            <summary>
+                Event that provides information about the experiment status.
+            </summary>
+        </member>
+        <member name="M:PatternRecognition.FingerprintRecognition.Experiments.FVC_DB_B.Execute">
+             <summary>
+                 Executes the experiment.
+             </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown when the resource path is invalid, the matcher is not assigned or the resource provider is not assigned.</exception>
+        </member>
+    </members>
+</doc>

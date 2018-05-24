@@ -1,0 +1,15 @@
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.FVCExperiments.XML
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.FVCExperiments.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.FVCExperiments.pdb
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.FVCExperiments\obj\Release\FR.FVCExperiments.csprojResolveAssemblyReference.cache
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.FVCExperiments\obj\Release\FR.FVCExperiments.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.FVCExperiments\obj\Release\FR.FVCExperiments.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.FVCExperiments\obj\Release\FR.FVCExperiments.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.FVCExperiments.XML
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.FVCExperiments.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.FVCExperiments.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.FVCExperiments\obj\Release\FR.FVCExperiments.csprojResolveAssemblyReference.cache
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.FVCExperiments\obj\Release\FR.FVCExperiments.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.FVCExperiments\obj\Release\FR.FVCExperiments.csproj.CopyComplete
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.FVCExperiments\obj\Release\FR.FVCExperiments.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.FVCExperiments\obj\Release\FR.FVCExperiments.pdb

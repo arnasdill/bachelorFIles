@@ -1,0 +1,15 @@
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.Parziale2004.XML
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.Parziale2004.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\bin\Release\FR.Parziale2004.pdb
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Parziale2004\obj\Release\FR.Parziale2004.csprojResolveAssemblyReference.cache
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Parziale2004\obj\Release\FR.Parziale2004.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Parziale2004\obj\Release\FR.Parziale2004.dll
+C:\Users\Arnas\Desktop\kursinis\FingerprintRecognition v2.2\FR.Parziale2004\obj\Release\FR.Parziale2004.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.Parziale2004.XML
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.Parziale2004.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\bin\Release\FR.Parziale2004.pdb
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Parziale2004\obj\Release\FR.Parziale2004.csprojResolveAssemblyReference.cache
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Parziale2004\obj\Release\FR.Parziale2004.csproj.CoreCompileInputs.cache
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Parziale2004\obj\Release\FR.Parziale2004.csproj.CopyComplete
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Parziale2004\obj\Release\FR.Parziale2004.dll
+C:\Users\Arnas\Desktop\kursinis\VEIKIANTYS\FingerprintRecognition v2.2\FR.Parziale2004\obj\Release\FR.Parziale2004.pdb
