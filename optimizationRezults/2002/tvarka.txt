@@ -1,3 +1,0 @@
-pirmiausia atlieku testus su thr, kad nustatyt geriausia EER.
-Tada darau testus , imdamas geriausia THR reiksme ir gaunu GLOBALANGLETHR.
-tada paimu eer ir globalangleTHR ir bandau daryt su globaldistthr
