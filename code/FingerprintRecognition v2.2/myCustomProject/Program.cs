@@ -7,20 +7,7 @@ using System.IO;
 
 
 namespace PatternRecognition.FingerprintRecognition
-{/*
-
-
-TOOOOOOOOOOOOOOOOO DOOOOOOOOOOOOOOOO
-
-    issiaksinti kaip ten tas eer skaiciuojasi, 
-    pasidaryti testa main programoj is naujo si JY ir su taips paciais extractoriais
-    viska padaryt be hardcodo, o su parametrais
-
-
-
-
-
-    */
+{
     class ImageInfo
     {
         public int firstDigit;
